@@ -1,0 +1,333 @@
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: "PT Sans", sans-serif; 
+    font-size: 22px;
+    line-height: 26px;
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+
+  .mainpage-header {
+    background-color: #FFFFFF;
+    color:#000000;
+    }
+
+.navigation-link {
+    color: inherit;
+    background-color: #FFFFFF;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-align: center;
+    }
+
+.navigation-link-wanting-here {
+    color: #FFFFFF;
+    font-weight: 700;
+    background-color: #756157;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+ }
+
+ .number-of-favorites {
+    color: #FFFFFF;
+    background-color: #7DB54F;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+ }
+
+.main-index {
+    background-image: url("../images/sedona-background-mainpage.jpg");
+    color: #000000;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.advantages {
+    background-color:#FFFFFF;
+    color: #000000;
+    font-weight: 400;
+    font-size: 10px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.sedona-is-a-small-town {
+    color: inherit;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+
+}
+
+.reasons-why-sedona-is-better {
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+    font-weight: 400;
+}
+
+.main-advantage {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #82B3D3;
+}
+
+.advantages-description-main {
+    color: #FFFFFF;
+    background-color: #82B3D3;
+}
+
+.advantages h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    background-color: #83B3D3;
+}
+
+.advantages .advantages-description {
+    color: #333333;
+    background-color: #83B3D3;
+}
+
+.interested-section {
+    
+    color: #000000;
+    background-color: #FFFFFF;
+    font-weight: 700;
+    text-align: center;
+}
+
+.interested-question {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.secect-dates {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333
+}
+
+.link-to-catalog {
+    color: #FFFFFF;
+    font-weight: 700;
+    background-color: #756157;
+    font-size: 20px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+/** не поняла, почему  цвет ссыли не меняется **/
+}
+
+.footer-subscribe {
+    background-image: url("../images/background.jpg");
+    color: #FFFFFF;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    text-align: center;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    
+}
+
+.newsletter-button {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #82B3D3;
+}
+
+.contact-number {
+    color:#000000;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.inner-header {
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.inner-header-title {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 78px;
+    color: #FFFFFF;
+}
+
+.breadcumbs-item
+{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+fieldset {
+    color: #FFFFFF;
+}
+
+.category {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.search-hotel {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #82B3D3;
+}
+
+.reset-search {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.number-hotels-found-perpage {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.the-cheapest {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+}
+
+.product-card-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.product-list p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+}
+
+.product-list p.rate{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333333;
+    background-color: #F2F2F2;
+}
+
+.product-card-button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.button-details {
+    background-color: #756157;
+}
+
+.added-to-favorites {
+    background-color: #7DB54F; 
+}
+
+.button-add-to-favorites {
+    background-color: #82B3D3; 
+}
+
+.pagination-link {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.pagination-current {
+    color: #000000;
+}
+
+.number-of-hotels-shown-perpage {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+}
+
+.number-of-hotels-option {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

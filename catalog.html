@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Седона: Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="mainpage-header">
@@ -35,7 +36,7 @@
               <span class="number-of-favorites" >12</span>
             </a>
           <li class="navigation-list-item">
-            <a class="navigation-link-wanting-here" href="#">Хочу сюда!</a>
+            <a class="navigation-link-wanting-here" href="catalog.html">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -59,7 +60,7 @@
         <h2 class="visually-hidden">Список товаров с фильтрами</h2>
         <form action="#" method="get">
           <fieldset class="infrustructure-list">
-            <legend>Инфраструктура:</legend>
+            <legend class="category">Инфраструктура:</legend>
             
               <input class="infrustructure-item" type="checkbox" name="pool" value="pool" id="pool" checked>
               <label for="pool">Бассейн</label>
@@ -74,7 +75,7 @@
 
         
           <fieldset class="livingtype-list">
-          <p>Тип жилья</p>
+          <p class="category">Тип жилья</p>
           <input class="livingtype-item" type="radio" id="pool-radio" name="livingtype" checked>
           <label for="pool-radio">Гостиница</label>
 
@@ -84,7 +85,7 @@
           <input class="livingtype-item" type="radio" id="apartments" name="livingtype">
           <label for="apartments">Апартаменты</label>
           </fieldset>
-        <p>Стоимость, ₽:</p>
+        <p class="category">Стоимость, ₽:</p>
         <button class="search-hotel" type="submit">Применить</button>
         <button class="reset-search" type="reset">Сбросить</button>
       </form>
@@ -92,7 +93,7 @@
 
       <section class="hotels-found">
         <h2 class="visually-hidden">Результаты поиска</h2>
-        <p>Найдено гостиниц: 38</p>
+        <p class="number-hotels-found-perpage">Найдено гостиниц: 38</p>
         <select class="select-controls" aria-label="Сортировка">
           <option value="the-cheapest">Сначала дешевые</option>
           <option value="popular">Самое популярное</option>
@@ -118,8 +119,8 @@
           <h3 class="product-card-title">Amara Resort & Spa</h3> 
           <p>Гостиница</p>
           <p>От 4000 ₽</p>
-          <a class="product-card-button button" href="#">Подробнее</a>
-          <a class="product-card-button button" href="#">В избранное</a>
+          <a class="product-card-button button-details" href="#">Подробнее</a>
+          <a class="product-card-button button-add-to-favorites" href="#">В избранное</a>
           <p class="rate">Рейтинг: 8,5</p>
       </li>
 
@@ -128,8 +129,8 @@
             <h3 class="product-card-title">Villas at Poco Diablo</h3> 
             <p>Гостиница</p>
             <p>От 5000 ₽</p>
-            <a class="product-card-button button" href="#">Подробнее</a>
-            <a class="product-card-button button" href="#">В избранное</a>
+            <a class="product-card-button button-details" href="#">Подробнее</a>
+            <a class="product-card-button added-to-favorites" href="#">В избранном</a>
             <p class="rate">Рейтинг: 9,2</p>
         </li>
 
@@ -138,8 +139,8 @@
             <h3 class="product-card-title">Desert Quail Inn</h3> 
             <p>Гостиница</p>
             <p>От 2500 ₽</p>
-            <a class="product-card-button button" href="#">Подробнее</a>
-            <a class="product-card-button button" href="#">В избранное</a>
+            <a class="product-card-button button-details" href="#">Подробнее</a>
+            <a class="product-card-button button-add-to-favorites" href="#">В избранное</a>
             <p class="rate">Рейтинг: 6,9</p>
         </li>
 
@@ -148,8 +149,8 @@
             <h3 class="product-card-title">GreenTree Inn</h3> 
             <p>Гостиница</p>
             <p>От 1500 ₽</p>
-            <a class="product-card-button button" href="#">Подробнее</a>
-            <a class="product-card-button button" href="#">В избранное</a>
+            <a class="product-card-button button-details" href="#">Подробнее</a>
+            <a class="product-card-button button-add-to-favorites" href="#">В избранное</a>
             <p class="rate">Рейтинг: 5,0</p>
         </li>
         </ul>
@@ -175,11 +176,11 @@
           </li>
         </ul>
 
-        <p>Гостиниц на странице:</p>
+        <p class="number-of-hotels-shown-perpage">Гостиниц на странице:</p>
           <select class="number-of-hotels-select" aria-label="Количество предложений на странице">
-            <option value="4">4</option>
-            <option value="6">6</option>
-            <option value="8">8</option>
+            <option class="number-of-hotels-option" value="4">4</option>
+            <option class="number-of-hotels-option" value="6">6</option>
+            <option class="number-of-hotels-option" value="8">8</option>
         </select>
       </section>
         
