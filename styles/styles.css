@@ -15,17 +15,13 @@
   }
 
   body {
-    font-family: "PT Sans", sans-serif; 
+    font-family: "PT Sans", sans-serif, "Arial"; 
     font-size: 22px;
     line-height: 26px;
-    background-color: #FFFFFF;
+    background: #F2F2F2;
     color: #000000;
   }
 
-  .mainpage-header {
-    background-color: #FFFFFF;
-    color:#000000;
-    }
 
 .navigation-link {
     color: inherit;
@@ -33,7 +29,6 @@
     font-weight: 700;
     text-transform: capitalize;
     text-decoration: none;
-    text-align: center;
     }
 
 .navigation-link-wanting-here {
@@ -53,21 +48,22 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 13px;
+    letter-spacing: -0.1em;
  }
 
 .main-index {
     background-image: url("../images/sedona-background-mainpage.jpg");
-    color: #000000;
-    background-color: #FFFFFF;
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
 
+.welcome-text {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .advantages {
-    background-color:#FFFFFF;
-    color: #000000;
     font-weight: 400;
-    font-size: 10px;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
@@ -79,7 +75,6 @@
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
-
 }
 
 .reasons-why-sedona-is-better {
@@ -100,15 +95,31 @@
 
 .advantages-description-main {
     color: #FFFFFF;
-    background-color: #82B3D3;
 }
 
 .advantages h3 {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
-    background-color: #83B3D3;
 }
+
+li.advantages-item h3 {
+text-transform: uppercase;
+}
+
+.advantage-1, .advantage-5 {
+    background: #82B3D3;
+}
+
+.advantage-2, .advantage-4, .advantage-6, .advantage-8 {
+    background: rgba(131, 179, 211, 0.12);
+}
+
+.advantage-7 {
+    background: rgba(131, 179, 211, 0.2);
+}
+  
+
 
 .advantages .advantages-description {
     color: #333333;
@@ -130,7 +141,7 @@
     text-transform: uppercase;
 }
 
-.secect-dates {
+.select-dates {
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
@@ -157,7 +168,7 @@
     text-align: center;
 }
 
-h5 {
+.subscribe-call-to-action {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
@@ -172,6 +183,7 @@ h5 {
     text-transform: uppercase;
     color: #FFFFFF;
     background-color: #82B3D3;
+    font-family: PT Sans;
 }
 
 .contact-number {
@@ -180,6 +192,8 @@ h5 {
     line-height: 40px;
     font-weight: 400;
     font-style: normal;
+    background-color: #FFFFFF;
+    text-decoration: none;
 
 }
 
@@ -189,7 +203,6 @@ h5 {
 }
 
 .inner-header-title {
-    font-weight: 700;
     font-size: 60px;
     line-height: 78px;
     color: #FFFFFF;
@@ -221,6 +234,7 @@ fieldset {
     text-transform: uppercase;
     color: #FFFFFF;
     background-color: #82B3D3;
+    font-family: "PT Sans";
 }
 
 .reset-search {
@@ -229,6 +243,7 @@ fieldset {
     line-height: 20px;
     text-align: center;
     color: #FFFFFF;
+    font-family: "PT Sans";
 }
 
 .number-hotels-found-perpage {
@@ -236,7 +251,6 @@ fieldset {
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
-    color: #000000;
 }
 
 .the-cheapest {
@@ -250,7 +264,6 @@ fieldset {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
-    color: #000000;
 }
 
 .product-list p{
@@ -277,18 +290,22 @@ fieldset {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 .button-details {
     background-color: #756157;
+    text-decoration: none;
 }
 
 .added-to-favorites {
     background-color: #7DB54F; 
+    text-decoration: none;
 }
 
 .button-add-to-favorites {
     background-color: #82B3D3; 
+    text-decoration: none;
 }
 
 .pagination-link {
@@ -298,10 +315,12 @@ fieldset {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    background: #82B3D3;
 }
 
 .pagination-current {
     color: #000000;
+    background-color: #F2F2F2;
 }
 
 .number-of-hotels-shown-perpage {
@@ -317,17 +336,4 @@ fieldset {
     line-height: 21px;
     color: #333333;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
