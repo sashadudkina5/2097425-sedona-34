@@ -22,14 +22,26 @@
     color: #000000;
   }
 
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+  }
+
 
 .navigation-link {
     color: inherit;
-    background-color: #FFFFFF;
     font-weight: 700;
     text-transform: capitalize;
     text-decoration: none;
     }
+
+    .navigation-user {
+        background-image: url(".../images/search.svg");
+        background-image: url(".../images/favorite.svg");
+    }
+
+    /** Не поняла, как добавить две декоративные картинки. В одном правиле? **/
 
 .navigation-link-wanting-here {
     color: #FFFFFF;
@@ -58,8 +70,7 @@
 }
 
 .welcome-text {
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
 }
 
 .advantages {
@@ -70,7 +81,6 @@
 }
 
 .sedona-is-a-small-town {
-    color: inherit;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
@@ -98,7 +108,6 @@
 }
 
 .advantages h3 {
-    font-weight: 700;
     font-size: 24px;
     line-height: 28px;
 }
@@ -107,12 +116,28 @@ li.advantages-item h3 {
 text-transform: uppercase;
 }
 
+.advantage-2 {
+    background-image: url("../images/advantages/living.svg");
+    background-repeat: no-repeat;
+}
+
+.advantage-3 {
+    background-image: url("../images/advantages/food.svg");
+    background-repeat: no-repeat;
+    
+}
+
+.advantage-4 {
+    background-image: url("../images/advantages/souvenir.svg");
+    background-repeat: no-repeat;
+}
+
 .advantage-1, .advantage-5 {
-    background: #82B3D3;
+    background-color: #82B3D3;
 }
 
 .advantage-2, .advantage-4, .advantage-6, .advantage-8 {
-    background: rgba(131, 179, 211, 0.12);
+    background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantage-7 {
@@ -137,7 +162,6 @@ text-transform: uppercase;
 .interested-question {
     font-size: 30px;
     line-height: 36px;
-    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -183,14 +207,17 @@ text-transform: uppercase;
     text-transform: uppercase;
     color: #FFFFFF;
     background-color: #82B3D3;
-    font-family: PT Sans;
+    font-family: inherit;
+}
+
+.footer-bottom {
+    background-color: #FFFFFF;
 }
 
 .contact-number {
     color:#000000;
     font-size: 40px;
     line-height: 40px;
-    font-weight: 400;
     font-style: normal;
     background-color: #FFFFFF;
     text-decoration: none;
@@ -210,10 +237,13 @@ text-transform: uppercase;
 
 .breadcumbs-item
 {
-    font-weight: 400;
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
+}
+
+.breadcumbs {
+    background-image: url("../images/arrow-to-the-right.svg");
 }
 
 fieldset {
@@ -234,30 +264,37 @@ fieldset {
     text-transform: uppercase;
     color: #FFFFFF;
     background-color: #82B3D3;
-    font-family: "PT Sans";
+    font-family: inherit;
 }
 
 .reset-search {
-    font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     text-align: center;
     color: #FFFFFF;
-    font-family: "PT Sans";
+    font-family: inherit;
 }
 
 .number-hotels-found-perpage {
-    font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
 }
 
 .the-cheapest {
-    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+
+
+}
+
+.vision-per-page {
+    background-image: url("../images/view.svg");
+    background-repeat: no-repeat;
 }
 
 .product-card-title {
@@ -267,14 +304,14 @@ fieldset {
 }
 
 .product-list p{
-    font-weight: 400;
+
     font-size: 18px;
     line-height: 21px;
     color: #333333;
 }
 
 .product-list p.rate{
-    font-weight: 400;
+
     font-size: 16px;
     line-height: 20px;
     text-align: center;
@@ -324,14 +361,15 @@ fieldset {
 }
 
 .number-of-hotels-shown-perpage {
-    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 .number-of-hotels-option {
-    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     color: #333333;
