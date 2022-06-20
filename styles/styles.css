@@ -14,20 +14,58 @@
     font-display: swap;
   }
 
+  html {
+    height: 100%;
+  }
+
+
   body {
-    font-family: "PT Sans", sans-serif, "Arial"; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: "PT Sans", sans-serif; 
     font-size: 22px;
     line-height: 26px;
     background: #F2F2F2;
     color: #000000;
   }
 
-  .container {
-    width: 100%;
-    margin: 0 auto;
+  .page-container {
+    width: 1200px;
     background-color: #FFFFFF;
+    margin: 0 auto;
   }
 
+  .main-container {
+    flex-grow: 1;
+  }
+
+  .main-page-container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .navigation {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  /** не понимаю, как сделать горизонтальное положение пунктов навигации **/
+
+  .navigation-list {
+    margin: 0;
+    padding: 0;
+    width: 400px; /* не поняла, как рассчитать здесь ширину */
+  }
+
+
+
+  .navigation-user {
+    max-width: 300px;
+    margin-left: auto;
+  }
 
 .navigation-link {
     color: inherit;
@@ -42,6 +80,13 @@
     }
 
     /** Не поняла, как добавить две декоративные картинки. В одном правиле? **/
+
+    .navigation-logo {
+        width: 139px;
+        margin-right: 47px;
+    }
+
+    /* не понимаю, почему не получается горизонтально поместить логотип и навигацию */
 
 .navigation-link-wanting-here {
     color: #FFFFFF;
@@ -94,6 +139,24 @@
     font-weight: 400;
 }
 
+.advantages-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* не понимаю, какие паддингы указать для флексбокса advantages-list т.к. у каждого преимущества паддинги отличаются */
+
+.advantages-list li:not(img) {
+    width: 400px;
+}
+
+.advantages .advantages-description {
+    color: #333333;
+}
+
 .main-advantage {
     font-weight: 700;
     font-size: 24px;
@@ -136,6 +199,7 @@ text-transform: uppercase;
     background-color: #82B3D3;
 }
 
+
 .advantage-2, .advantage-4, .advantage-6, .advantage-8 {
     background-color: rgba(131, 179, 211, 0.12);
 }
@@ -144,12 +208,6 @@ text-transform: uppercase;
     background: rgba(131, 179, 211, 0.2);
 }
   
-
-
-.advantages .advantages-description {
-    color: #333333;
-    background-color: #83B3D3;
-}
 
 .interested-section {
     
@@ -183,6 +241,7 @@ text-transform: uppercase;
 /** не поняла, почему  цвет ссыли не меняется **/
 }
 
+
 .footer-subscribe {
     background-image: url("../images/background.jpg");
     color: #FFFFFF;
@@ -192,12 +251,17 @@ text-transform: uppercase;
     text-align: center;
 }
 
+
 .subscribe-call-to-action {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
     
+}
+
+.footer-background {
+    text-align: center;
 }
 
 .newsletter-button {
@@ -212,6 +276,12 @@ text-transform: uppercase;
 
 .footer-bottom {
     background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    align-items: center; /** не понимаю, почему не работает вертикальное выравнивание **/
 }
 
 .contact-number {
@@ -221,7 +291,18 @@ text-transform: uppercase;
     font-style: normal;
     background-color: #FFFFFF;
     text-decoration: none;
+    width: 720px;
+    margin-left: 40px;
+    margin-right: 40px;
 
+}
+
+.list-of-social-media {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 142px;
+    justify-content: space-around;
 }
 
 .inner-header {
@@ -244,10 +325,23 @@ text-transform: uppercase;
 
 .breadcumbs {
     background-image: url("../images/arrow-to-the-right.svg");
+    background-repeat: no-repeat;
 }
 
 fieldset {
     color: #FFFFFF;
+}
+
+.catalog-filters {
+    background-image: url("../images/background-image-filters.jpg");
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row; /* не понимаю, почему элементы не выстроились горизонтально */
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: flex-start;
+
+
 }
 
 .category {
@@ -255,6 +349,11 @@ fieldset {
     font-size: 20px;
     line-height: 26px;
     color: #FFFFFF;
+}
+
+section.hotel-catalog label {
+    font-size: 18px;
+    line-height: 21px;
 }
 
 .search-hotel {
@@ -275,10 +374,16 @@ fieldset {
     font-family: inherit;
 }
 
+.result-of-search-container {
+    display: flex;
+    flex-direction: row;
+}
+
 .number-hotels-found-perpage {
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .the-cheapest {
@@ -301,6 +406,17 @@ fieldset {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
+}
+
+.product-list {
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    width: 1055px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
 .product-list p{
@@ -345,6 +461,24 @@ fieldset {
     text-decoration: none;
 }
 
+.filters-bottom-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1056px;
+}
+
+.pagination {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 656px;  /* не понимаю, как сделать так, чтобы навигация по страницам не выезжала за край */
+}
+
 .pagination-link {
     font-weight: 700;
     font-size: 20px;
@@ -375,3 +509,6 @@ fieldset {
     color: #333333;
 }
 
+.website-developer {
+    width: 115px;
+}

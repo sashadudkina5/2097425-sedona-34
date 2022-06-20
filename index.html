@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 <body>
-  <div class="container">
+  <div class="page-container">
   <header class="mainpage-header">
 
     <nav class="navigation">
       <ul class="navigation-list">
-        <li class="navigation-list-logo">
+        <li class="navigation-logo">
           <a href="#">
             <img class="logo" src="images/logo.svg" alt="Логотип" width="139" height="70">
           </a>
@@ -41,12 +41,12 @@
         <li class="navigation-list-item">
           <a class="navigation-link-wanting-here" href="#">Хочу сюда!</a>
         </li>
-
       </ul>
     </nav>
   </header>
    
-  <main class="main-index">
+  <main class="main-index main-container">
+    <div class="main-page-container">
     <section class="welcome-text">
     <h1 class="visually-hidden">Седона</h1>
     <img class="welcome" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону">
@@ -57,12 +57,16 @@
       <p class="sedona-is-a-small-town">Седона — небольшой городок в Аризоне,<br>
       заслуживающий большего!</p>
       <p class="reasons-why-sedona-is-better">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-      <img src="images/photo-of-city.jpg" width="800" height="384" alt="Фотография города">
+
       <ul class="advantages-list"> 
+      
         <li class="advantages-item advantage-1">
           <h3 class="main-advantage">Настоящий городок</h3>
         <p class="advantages-description-main">— №1 —</p>
         <p class="advantages-description-main">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+        </li>
+        <li>
+          <img src="images/photo-of-city.jpg" width="800" height="384" alt="Фотография города">
         </li>
         <li class="advantages-item advantage-2">
           <h3>Жильё</h3>
@@ -77,8 +81,10 @@
           <p class="advantages-description">Не только китайского,<br>
           но и настоящего местного<br> производства!</p>
         </li>
-        <li class="advantages-item advantage-5">
+        <li>
           <img class="advantages-canyon-picture" src="images/photo-of-canyon.jpg" width="800" height="384" alt="Каньон в Седоне">
+        </li>
+        <li class="advantages-item advantage-5">
           <h3 class="main-advantage">Там есть<br> мост дьявола</h3>
           <p class="advantages-description-main">— №2 —</p>
           <p class="advantages-description-main">Да, по нему можно пройти!<br> Если вы осмелитесь,<br> разумеется </p>
@@ -109,9 +115,11 @@
         <a class="link-to-catalog" href="catalog.html">ПОИСК ГОСТИНИЦЫ В седоне</a>
       </p>
     </section>
+  </div>
   </main>
   
   <footer class="footer-subscribe">
+    <div class="footer-container">
     <section class="footer-background">
       <h5 class="subscribe-call-to-action">Подпишитесь на рассылку</h5>
       <p>Только полезная информация и никакого спама,<br>
@@ -124,7 +132,7 @@
     </section>
 
 
-    <section class="footer-bottom"> 
+    <div class="footer-bottom"> 
     <section class="social-media-list">
 
       <h6 class="visually-hidden">Ссылки на социальные сети</h6>
@@ -158,8 +166,9 @@
         <img src="images/html-academy.svg" width="115" height="33" alt="Сайт разработчика">
       </a>
     </section>
-  </section>
-  </footer> 
+  </div>
+</div>
+</footer> 
 </div>
 </body>
 </html>

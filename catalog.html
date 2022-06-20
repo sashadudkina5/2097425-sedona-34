@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <div class="container">
+    <div class="page-container">
     <header class="mainpage-header">
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-logo">
             <a href="index.html">
-              <img class="logo" src="images/logo/logo.svg" alt="Логотип" width="139" height="70">
+              <img class="logo" src="images/logo.svg" alt="Логотип" width="139" height="70">
             </a>
           </li>
           <li class="navigation-list-item">
@@ -42,7 +42,9 @@
         </ul>
       </nav>
     </header>
-    <main class="main-inner">
+    <main class="main-inner main-container">
+      <div class="catalog-filters">
+
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ol class="breadcumbs">
@@ -77,8 +79,8 @@
         
           <fieldset class="livingtype-list">
           <p class="category">Тип жилья</p>
-          <input class="livingtype-item" type="radio" id="pool-radio" name="livingtype" checked>
-          <label for="pool-radio">Гостиница</label>
+          <input class="livingtype-item" type="radio" id="hotel" name="livingtype" checked>
+          <label for="hotel">Гостиница</label>
 
           <input class="livingtype-item" type="radio" id="motel" name="livingtype">
           <label for="motel">Мотель</label>
@@ -92,6 +94,9 @@
       </form>
       </section>
 
+    </div>
+
+    <div class="result-of-search-container">
       <section class="hotels-found">
         <h2 class="visually-hidden">Результаты поиска</h2>
         <p class="number-hotels-found-perpage">Найдено гостиниц: 38</p>
@@ -101,6 +106,7 @@
           <option value="expensive">Дорогое</option>
          
         </select>
+        </section>
 
         <section class="vision-per-page">
         <a href="#" class="button button-show-gallery">
@@ -113,6 +119,7 @@
           <span class="visually-hidden">Показать список</span>
         </a>
       </section>
+    </div>
 
  
 
@@ -158,6 +165,8 @@
         </li>
         </ul>
 
+        <div class="filters-bottom-container">
+
         <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
@@ -179,19 +188,23 @@
           </li>
         </ul>
 
+          <div class="number-of-hotels-shown-perpage-container">
         <p class="number-of-hotels-shown-perpage">Гостиниц на странице:</p>
           <select class="number-of-hotels-select" aria-label="Количество предложений на странице">
             <option class="number-of-hotels-option" value="4">4</option>
             <option class="number-of-hotels-option" value="6">6</option>
             <option class="number-of-hotels-option" value="8">8</option>
         </select>
-      </section>
-        
+      </div>
+      
+    </div>
+
       </main>
 
       <footer class="page-footer">
+        <div class="footer-container">
         <div class="footer-background inner">
-        <h4>Подпишитесь на рассылку</h4>
+        <h5 class="subscribe-call-to-action">Подпишитесь на рассылку</h5>
         <p>Только полезная информация и никакого спама,<br>
            честное бойскаутское!</p>
            <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -201,6 +214,7 @@
             </form>
           </div>
 
+          <div class="footer-bottom"> 
       <section class="social-media-list">
         <h5 class="visually-hidden">Ссылки на социальные сети</h5>
         <ul class="list-of-social-media">
@@ -233,8 +247,9 @@
         <a href="https://htmlacademy.ru/">
           <img src="images/html-academy.svg" width="115" height="33" alt="Сайт разработчика">
         </a>
-      </section>    
+      </section>   
+    </div>
+  </div>
   </footer> 
-</div>
   </body>
 </html>
