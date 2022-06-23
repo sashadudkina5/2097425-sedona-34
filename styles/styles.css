@@ -4,89 +4,77 @@
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: "PT Sans";
     src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
-  }
+}
 
-  html {
+* {
+    box-sizing: border-box;
+}
+
+html {
     height: 100%;
-  }
+}
 
 
-  body {
+body {
     margin: 0;
-    display: flex;
-    flex-direction: column;
     min-height: 100%;
-    font-family: "PT Sans", sans-serif; 
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 22px;
     line-height: 26px;
     background: #F2F2F2;
     color: #000000;
-  }
+}
 
-  .page-container {
+.page-container {
     width: 1200px;
     background-color: #FFFFFF;
     margin: 0 auto;
-  }
-
-  .main-container {
-    flex-grow: 1;
-  }
-
-  .main-page-container {
-    width: 1200px;
-    margin: 0 auto;
-  }
-
-  .navigation {
     display: flex;
-    width: 1200px;
-    margin: 0 auto;
-  }
+    flex-direction: column;
+    flex-grow: 1;
+    /* не получается липкий футер :( */
+}
 
-  /** не понимаю, как сделать горизонтальное положение пунктов навигации **/
+.mainpage-header {
+    padding-left: 70px;
+    padding-right: 70px;
+}
 
-  .navigation-list {
+.main-container {
+    flex-grow: 1;
+    /* не получается липкий футер :( */
+}
+
+.navigation {
+    display: flex;
+}
+
+
+
+.navigation-list {
     margin: 0;
     padding: 0;
-    width: 400px; /* не поняла, как рассчитать здесь ширину */
-  }
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
 
 
-
-  .navigation-user {
-    max-width: 300px;
-    margin-left: auto;
-  }
 
 .navigation-link {
     color: inherit;
     font-weight: 700;
     text-transform: capitalize;
     text-decoration: none;
-    }
-
-    .navigation-user {
-        background-image: url(".../images/search.svg");
-        background-image: url(".../images/favorite.svg");
-    }
-
-    /** Не поняла, как добавить две декоративные картинки. В одном правиле? **/
-
-    .navigation-logo {
-        width: 139px;
-        margin-right: 47px;
-    }
-
-    /* не понимаю, почему не получается горизонтально поместить логотип и навигацию */
+}
 
 .navigation-link-wanting-here {
     color: #FFFFFF;
@@ -97,21 +85,31 @@
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
- }
+}
 
- .number-of-favorites {
+.number-of-favorites {
     color: #FFFFFF;
     background-color: #7DB54F;
     font-weight: 400;
     font-size: 10px;
     line-height: 13px;
     letter-spacing: -0.1em;
- }
+}
 
-.main-index {
+.main-container {
     background-image: url("../images/sedona-background-mainpage.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
+}
+
+.search-image {
+    background-image: url(".../images/search.svg");
+    background-repeat: no-repeat;
+}
+
+.favorites-image {
+    background-image: url(".../images/favorite.svg");
+    background-repeat: no-repeat;
 }
 
 .welcome-text {
@@ -123,6 +121,11 @@
     font-size: 18px;
     line-height: 21px;
     text-align: center;
+}
+
+.list-of-advantages-main {
+    display: flex;
+    padding: 0;
 }
 
 .sedona-is-a-small-town {
@@ -145,9 +148,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
 }
 
-/* не понимаю, какие паддингы указать для флексбокса advantages-list т.к. у каждого преимущества паддинги отличаются */
 
 .advantages-list li:not(img) {
     width: 400px;
@@ -175,42 +178,62 @@
     line-height: 28px;
 }
 
+.second-part-advantages-list {
+    display: flex;
+}
+
+.column-direction {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    justify-content: center;
+}
+
 li.advantages-item h3 {
-text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .advantage-2 {
     background-image: url("../images/advantages/living.svg");
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .advantage-3 {
     background-image: url("../images/advantages/food.svg");
     background-repeat: no-repeat;
-    
+    background-position: center;
+
 }
 
 .advantage-4 {
     background-image: url("../images/advantages/souvenir.svg");
     background-repeat: no-repeat;
+    background-position: center;
 }
 
-.advantage-1, .advantage-5 {
+.advantage-1,
+.advantage-5 {
     background-color: #82B3D3;
+    display: flex;
+    /* вот не знаю, как указать блокам высотуЧ, ведь нельзя поставить display block и flex одновременно */
 }
 
 
-.advantage-2, .advantage-4, .advantage-6, .advantage-8 {
+.advantage-2,
+.advantage-4,
+.advantage-6,
+.advantage-8 {
     background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantage-7 {
     background: rgba(131, 179, 211, 0.2);
 }
-  
+
 
 .interested-section {
-    
+
     color: #000000;
     background-color: #FFFFFF;
     font-weight: 700;
@@ -238,11 +261,11 @@ text-transform: uppercase;
     line-height: 36px;
     text-transform: uppercase;
     text-decoration: none;
-/** не поняла, почему  цвет ссыли не меняется **/
+    padding: 12px 15px;
 }
 
 
-.footer-subscribe {
+.footer-background-main-page {
     background-image: url("../images/background.jpg");
     color: #FFFFFF;
     background-color: #000000;
@@ -257,7 +280,7 @@ text-transform: uppercase;
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
-    
+
 }
 
 .footer-background {
@@ -277,23 +300,23 @@ text-transform: uppercase;
 .footer-bottom {
     background-color: #FFFFFF;
     display: flex;
-    flex-direction: row; 
-    justify-content: space-around;
+    color: #000000;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
-    align-items: center; /** не понимаю, почему не работает вертикальное выравнивание **/
+    padding: 40px 70px 30px;
+    align-items: center;
+
 }
 
 .contact-number {
-    color:#000000;
+    color: #000000;
     font-size: 40px;
     line-height: 40px;
     font-style: normal;
     background-color: #FFFFFF;
     text-decoration: none;
     width: 720px;
-    margin-left: 40px;
-    margin-right: 40px;
 
 }
 
@@ -314,18 +337,24 @@ text-transform: uppercase;
     font-size: 60px;
     line-height: 78px;
     color: #FFFFFF;
+    margin: 0;
 }
 
-.breadcumbs-item
-{
+.breadcumbs-item {
     font-size: 16px;
     line-height: 21px;
+    color: #FFFFFF;
+}
+
+.breadcrumbs-item-hotels {
     color: #FFFFFF;
 }
 
 .breadcumbs {
     background-image: url("../images/arrow-to-the-right.svg");
     background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
 }
 
 fieldset {
@@ -335,13 +364,8 @@ fieldset {
 .catalog-filters {
     background-image: url("../images/background-image-filters.jpg");
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: row; /* не понимаю, почему элементы не выстроились горизонтально */
-    width: 1200px;
-    margin: 0 auto;
-    justify-content: flex-start;
-
-
+    padding-left: 70px;
+    padding-top: 35px;
 }
 
 .category {
@@ -364,6 +388,7 @@ section.hotel-catalog label {
     color: #FFFFFF;
     background-color: #82B3D3;
     font-family: inherit;
+    padding: 14px 15px;
 }
 
 .reset-search {
@@ -376,7 +401,8 @@ section.hotel-catalog label {
 
 .result-of-search-container {
     display: flex;
-    flex-direction: row;
+    padding-left: 72px;
+    padding-right: 73px;
 }
 
 .number-hotels-found-perpage {
@@ -409,24 +435,24 @@ section.hotel-catalog label {
 }
 
 .product-list {
-    margin: 20px;
     padding: 0;
+    padding-left: 73px;
+    padding-right: 71px;
     display: flex;
-    width: 1055px;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0;
 
 }
 
-.product-list p{
+.product-list p {
 
     font-size: 18px;
     line-height: 21px;
     color: #333333;
 }
 
-.product-list p.rate{
+.product-list p.rate {
 
     font-size: 16px;
     line-height: 20px;
@@ -434,7 +460,16 @@ section.hotel-catalog label {
     text-transform: uppercase;
     color: #333333;
     background-color: #F2F2F2;
+    padding: 9px 22px 8px 23px;
+    display: block;
+    width: 140px;
 }
+
+.button-productlist-wanting-here {
+    padding: 9px 15px 8px;
+}
+
+
 
 .product-card-button {
     font-weight: 700;
@@ -452,12 +487,12 @@ section.hotel-catalog label {
 }
 
 .added-to-favorites {
-    background-color: #7DB54F; 
+    background-color: #7DB54F;
     text-decoration: none;
 }
 
 .button-add-to-favorites {
-    background-color: #82B3D3; 
+    background-color: #82B3D3;
     text-decoration: none;
 }
 
@@ -465,7 +500,6 @@ section.hotel-catalog label {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     width: 1056px;
 }
@@ -474,9 +508,7 @@ section.hotel-catalog label {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-right: 656px;  /* не понимаю, как сделать так, чтобы навигация по страницам не выезжала за край */
+    padding-left: 73px;
 }
 
 .pagination-link {
@@ -485,8 +517,16 @@ section.hotel-catalog label {
     line-height: 36px;
     text-align: center;
     text-transform: uppercase;
+    text-decoration: none;
     color: #FFFFFF;
     background: #82B3D3;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-right: 8px;
+    box-sizing: border-box;
+    padding-top: 11px;
+
 }
 
 .pagination-current {
@@ -501,6 +541,13 @@ section.hotel-catalog label {
     background-image: url("../images/arrow.svg");
     background-repeat: no-repeat;
     background-position: right;
+    display: block;
+    margin-right: 51px;
+}
+
+.number-of-hotels-shown-perpage-container {
+    display: flex;
+    padding-right: 71px;
 }
 
 .number-of-hotels-option {
@@ -511,4 +558,8 @@ section.hotel-catalog label {
 
 .website-developer {
     width: 115px;
+}
+
+.button-productlist-wanting-here {
+    padding: 9px 15px 8px;
 }
