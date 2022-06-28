@@ -22,6 +22,17 @@ html {
     height: 100%;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 
 body {
     margin: 0;
@@ -31,6 +42,8 @@ body {
     line-height: 26px;
     background: #F2F2F2;
     color: #000000;
+    display: flex;
+    flex-direction: column;
 }
 
 .page-container {
@@ -40,7 +53,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    /* не получается липкий футер :( */
+
 }
 
 .mainpage-header {
@@ -50,11 +63,16 @@ body {
 
 .main-container {
     flex-grow: 1;
-    /* не получается липкий футер :( */
+}
+
+.main-container-inner {
+    flex-grow: 1;
 }
 
 .navigation {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -63,10 +81,31 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-grow: 1;
     justify-content: space-between;
+    list-style-type: none;
+    /* не понимаю, почему навигация съехала вниз */
 }
 
+.navigation-main-items {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.navigation-user {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    padding-left: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    justify-items: flex-end;
+    list-style-type: none;
+    align-items: center;
+    /* не понимаю, почему кнопка "хочу сюда" не выровнялась */
+}
 
 
 .navigation-link {
@@ -74,6 +113,22 @@ body {
     font-weight: 700;
     text-transform: capitalize;
     text-decoration: none;
+    display: block;
+    height: 66px;
+    margin-right: 34px;
+    list-style-type: none;
+    padding-top: 20px;
+}
+
+
+.navigation-user .navigation-list-item {
+    min-width: 42px;
+    min-height: 66px;
+}
+
+.navigation-main-items .navigation-list-item a:last-child {
+    margin-right: 62px;
+    /*не понимаю, почему применилось ко всем пунктам списка, а не только к последнему" */
 }
 
 .navigation-link-wanting-here {
@@ -100,6 +155,8 @@ body {
     background-image: url("../images/sedona-background-mainpage.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
+    padding-top: 51px;
+    padding-bottom: 0px;
 }
 
 .search-image {
@@ -114,6 +171,8 @@ body {
 
 .welcome-text {
     text-align: center;
+    margin-botttom: 57px;
+    /*не уверена, что это нужно.. */
 }
 
 .advantages {
@@ -121,11 +180,14 @@ body {
     font-size: 18px;
     line-height: 21px;
     text-align: center;
+    padding-top: 63px;
+    margin-bottom: 103px;
 }
 
 .list-of-advantages-main {
     display: flex;
     padding: 0;
+    list-style-type: none;
 }
 
 .sedona-is-a-small-town {
@@ -133,6 +195,8 @@ body {
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 31px;
 }
 
 .reasons-why-sedona-is-better {
@@ -140,6 +204,9 @@ body {
     line-height: 26px;
     color: #333333;
     font-weight: 400;
+    display: block;
+    margin-bottom: 90px;
+    margin-top: 0px;
 }
 
 .advantages-list {
@@ -149,11 +216,13 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
+    list-style-type: none;
 }
 
 
 .advantages-list li:not(img) {
     width: 400px;
+    min-height: 384px;
 }
 
 .advantages .advantages-description {
@@ -176,6 +245,12 @@ body {
 .advantages h3 {
     font-size: 24px;
     line-height: 28px;
+    margin: 0px;
+}
+
+.column-direction p {
+    margin-top: 0px;
+    margin-bottom: 30px;
 }
 
 .second-part-advantages-list {
@@ -187,11 +262,23 @@ body {
     flex-direction: column;
     min-width: 400px;
     justify-content: center;
+    min-height: 384px;
+    padding: 20px;
+    /* не понимаю, почему в некоторых преимуществах верхний отступ стал 80px */
+}
+
+
+.list-of-advantages-main .column-direction {
+    padding-top: 80px;
 }
 
 li.advantages-item h3 {
     text-transform: uppercase;
+    margin-bottom: 30px;
 }
+
+
+
 
 .advantage-2 {
     background-image: url("../images/advantages/living.svg");
@@ -203,8 +290,9 @@ li.advantages-item h3 {
     background-image: url("../images/advantages/food.svg");
     background-repeat: no-repeat;
     background-position: center;
-
 }
+
+/* не понимаю , как поместить иконки в преимуществах */
 
 .advantage-4 {
     background-image: url("../images/advantages/souvenir.svg");
@@ -216,7 +304,6 @@ li.advantages-item h3 {
 .advantage-5 {
     background-color: #82B3D3;
     display: flex;
-    /* вот не знаю, как указать блокам высотуЧ, ведь нельзя поставить display block и flex одновременно */
 }
 
 
@@ -233,17 +320,22 @@ li.advantages-item h3 {
 
 
 .interested-section {
-
     color: #000000;
     background-color: #FFFFFF;
     font-weight: 700;
     text-align: center;
 }
 
+.link-to-catalog-button {
+    margin-bottom: 93px;
+}
+
 .interested-question {
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
+    margin: 0px;
+    margin-bottom: 29px;
 }
 
 .select-dates {
@@ -272,6 +364,8 @@ li.advantages-item h3 {
     background-repeat: no-repeat;
     background-size: 100% auto;
     text-align: center;
+    padding-bottom: 94px;
+    padding-top: 92px;
 }
 
 
@@ -280,11 +374,23 @@ li.advantages-item h3 {
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
+    margin: 0px;
+    margin-bottom: 29px;
 
 }
 
 .footer-background {
     text-align: center;
+    padding-bottom: 94px;
+}
+
+.footer-background-main-page {
+    padding-top: 94px;
+}
+
+.only-useful-info {
+    margin-bottom: 46px;
+    margin-top: 0px;
 }
 
 .newsletter-button {
@@ -304,7 +410,7 @@ li.advantages-item h3 {
     justify-content: space-between;
     padding: 0;
     margin: 0;
-    padding: 40px 70px 30px;
+    padding: 45px 70px 30px;
     align-items: center;
 
 }
@@ -325,7 +431,22 @@ li.advantages-item h3 {
     padding: 0;
     display: flex;
     width: 142px;
-    justify-content: space-around;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.social-media-link {
+    margin-right: 0px;
+    width: 47px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    padding-top: 12px;
+}
+
+
+.social-media-item:last-child {
+    margin-right: 0px;
 }
 
 .inner-header {
@@ -337,13 +458,19 @@ li.advantages-item h3 {
     font-size: 60px;
     line-height: 78px;
     color: #FFFFFF;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .breadcumbs-item {
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
+    margin-right: 25px;
+}
+
+.breadcumbs-item:last-child {
+    margin-right: 0px;
 }
 
 .breadcrumbs-item-hotels {
@@ -355,6 +482,15 @@ li.advantages-item h3 {
     background-repeat: no-repeat;
     padding: 0;
     margin: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.breadcumbs-link-to-mainpage {
+    background-image: url("../images/union.svg");
+    /* не понимаю, почему домик не отображается в браузере */
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 fieldset {
@@ -402,7 +538,10 @@ section.hotel-catalog label {
 .result-of-search-container {
     display: flex;
     padding-left: 72px;
-    padding-right: 73px;
+    padding-right: 71px;
+    padding-top: 55px;
+    margin-bottom: 56px;
+    justify-content: space-between;
 }
 
 .number-hotels-found-perpage {
@@ -410,6 +549,7 @@ section.hotel-catalog label {
     line-height: 36px;
     text-transform: uppercase;
     font-weight: 700;
+    margin: 0px;
 }
 
 .the-cheapest {
@@ -419,14 +559,37 @@ section.hotel-catalog label {
     background-image: url("../images/arrow.svg");
     background-repeat: no-repeat;
     background-position: left;
-
-
 }
 
 .vision-per-page {
-    background-image: url("../images/view.svg");
+    display: flex;
+}
+
+.vision-per-page .button {
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+}
+
+.vision-per-page .button:last-child {
+    margin-right: 0px;
+}
+
+.button-show-gallery {
+    background-image: url("../images/catalog-page-view/show-gallery.svg");
     background-repeat: no-repeat;
 }
+
+.button-one-product-per-page {
+    background-image: url("../images/catalog-page-view/one-product-per-page.svg");
+    background-repeat: no-repeat;
+}
+
+.button-show-list {
+    background-image: url("../images/catalog-page-view/show-list.svg");
+    background-repeat: no-repeat;
+}
+
 
 .product-card-title {
     font-weight: 700;
@@ -438,10 +601,13 @@ section.hotel-catalog label {
     padding: 0;
     padding-left: 73px;
     padding-right: 71px;
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0;
+    list-style-type: none;
+
 
 }
 
@@ -499,16 +665,19 @@ section.hotel-catalog label {
 .filters-bottom-container {
     margin: 0;
     padding: 0;
+    padding-left: 73px;
+    padding-right: 71px;
     display: flex;
     justify-content: space-between;
     width: 1056px;
+    margin-bottom: 25px;
 }
 
 .pagination {
     margin: 0;
     padding: 0;
     display: flex;
-    padding-left: 73px;
+    list-style-type: none;
 }
 
 .pagination-link {
@@ -524,7 +693,6 @@ section.hotel-catalog label {
     height: 60px;
     display: block;
     margin-right: 8px;
-    box-sizing: border-box;
     padding-top: 11px;
 
 }
@@ -538,11 +706,24 @@ section.hotel-catalog label {
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+}
+
+.number-of-hotels-select {
     background-image: url("../images/arrow.svg");
     background-repeat: no-repeat;
     background-position: right;
     display: block;
-    margin-right: 51px;
+    margin-left: auto;
+    /* не понимаю, почему элемент не прижался к правому краю */
+    width: 160px;
+}
+
+.select-dates-mainpage {
+    margin-top: 0;
+    margin-bottom: 56px;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
 }
 
 .number-of-hotels-shown-perpage-container {
@@ -554,6 +735,8 @@ section.hotel-catalog label {
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+    padding-left: 20px;
+    /* не сработало */
 }
 
 .website-developer {

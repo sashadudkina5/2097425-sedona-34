@@ -18,16 +18,20 @@
               <img class="logo" src="images/logo.svg" alt="Логотип" width="139" height="70">
             </a>
           </li>
-          <li class="navigation-list-item">
-            <a class="navigation-link navigation-link-current" href="#">Главная</a>
-          </li>
-          <li class="navigation-list-item">
-            <a class="navigation-link" href="#">О Седоне</a>
-          </li>
-          <li class="navigation-list-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
-          </li>
+          <li>
+            <ul class="navigation-main-items">
+              <li class="navigation-list-item">
+                <a class="navigation-link navigation-link-current" href="#">Главная</a>
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-link" href="#">О Седоне</a>
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-link" href="catalog.html">Гостиницы</a>
+              </li>
+            </ul>
         </ul>
+
 
         <ul class="navigation-list navigation-user">
           <li class="navigation-list-item">
@@ -65,27 +69,27 @@
               <h3 class="main-advantage">Настоящий городок</h3>
               <p class="advantages-description-main">— №1 —</p>
               <p class="advantages-description-main">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            </div> <!-- здесь попробовала сделать блок с перимуществами, добавила див-->
+            </div>
             <img src="images/photo-of-city.jpg" width="800" height="384" alt="Фотография города">
           </li>
-          <ul class="list-of-advantages-main">
-            <!-- Показывает ошибку, что в один ul нельзя вложить другой ul. Так ли это? Как тогда сделать вложенный список?-->
-            <li class="advantages-item advantage-2 column-direction">
-              <h3>Жильё</h3>
-              <p class="advantages-description">Рекомендуем пожить<br> в настоящем мотеле,<br> всё как в кино!</p>
-            </li>
-            <li class="advantages-item advantage-3 column-direction">
-              <h3>Еда</h3>
-              <p class="advantages-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
-              </p>
-            </li>
-            <li class="advantages-item advantage-4 column-direction">
-              <h3>Сувениры</h3>
-              <p class="advantages-description">Не только китайского,<br>
-                но и настоящего местного<br> производства!</p>
-            </li>
-          </ul>
-
+          <li>
+            <ul class="list-of-advantages-main">
+              <li class="advantages-item advantage-2 column-direction">
+                <h3>Жильё</h3>
+                <p class="advantages-description">Рекомендуем пожить<br> в настоящем мотеле,<br> всё как в кино!</p>
+              </li>
+              <li class="advantages-item advantage-3 column-direction">
+                <h3>Еда</h3>
+                <p class="advantages-description">Всегда заказывайте<br> топовый фирменный бургер, вы не разочаруетесь!
+                </p>
+              </li>
+              <li class="advantages-item advantage-4 column-direction">
+                <h3>Сувениры</h3>
+                <p class="advantages-description">Не только китайского,<br>
+                  но и настоящего местного<br> производства!</p>
+              </li>
+            </ul>
+          </li>
 
           <li class="advantages-item advantage-5">
             <div class="column-direction">
@@ -120,7 +124,7 @@
       <section class="interested-section">
         <h4 class="visually-hidden">Выбрать гостиницу</h4>
         <p class="interested-question">Заинтересовались?</p>
-        <p class="senumber-of-hotels-shown-perpage">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
+        <p class="select-dates-mainpage">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
           предложения гостиниц в Седоне</p>
         <p class="link-to-catalog-button">
           <a class="link-to-catalog" href="catalog.html">ПОИСК ГОСТИНИЦЫ В седоне</a>
@@ -128,10 +132,10 @@
       </section>
     </main>
 
-    <footer class="footer-subscribe">
+    <footer>
       <section class="footer-background-main-page">
         <h5 class="subscribe-call-to-action">Подпишитесь на рассылку</h5>
-        <p>Только полезная информация и никакого спама,<br>
+        <p class="only-useful-info">Только полезная информация и никакого спама,<br>
           честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <input type="email" placeholder="Ваш e-mail" id="subscribe">
@@ -147,17 +151,17 @@
           <h6 class="visually-hidden">Ссылки на социальные сети</h6>
           <ul class="list-of-social-media">
             <li class="social-media-item">
-              <a href="https://vk.com/htmlacademy">
+              <a class="social-media-link" href="https://vk.com/htmlacademy">
                 <img src="images/social-media/vk.svg" alt="Страница Вконтакте" width="24" height="14">
               </a>
             </li>
             <li class="social-media-item">
-              <a href="https://t.me/htmlacademy ">
+              <a class="social-media-link" href="https://t.me/htmlacademy ">
                 <img src="images/social-media/telegram.svg" width="18" height="15" alt="Канал Телеграм">
               </a>
             </li>
             <li class="social-media-item">
-              <a href=" https://www.youtube.com/user/htmlacademyru">
+              <a class="social-media-link" href="https://www.youtube.com/user/htmlacademyru">
                 <img src="images/social-media/you-tube.svg" width="22" height="17" alt="Ютуб Канал">
               </a>
             </li>
@@ -166,7 +170,7 @@
 
 
         <address class="contacts">
-          <p><span class="visually-hidden">Контактный номер телефона</span></p>
+          <p class="visually-hidden">Контактный номер телефона</p>
           <a class="contact-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
 
