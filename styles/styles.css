@@ -61,6 +61,10 @@ body {
     padding-right: 70px;
 }
 
+.navigation-logo {
+    margin-right: 30px;
+}
+
 .main-container {
     flex-grow: 1;
 }
@@ -92,6 +96,8 @@ body {
     padding: 0;
     list-style-type: none;
     flex-wrap: wrap;
+    padding-left: 17px;
+    width: 490px;
 }
 
 .navigation-user {
@@ -99,8 +105,6 @@ body {
     padding: 0;
     margin: 0;
     padding-left: 12px;
-    padding-top: 14px;
-    padding-bottom: 14px;
     justify-items: flex-end;
     list-style-type: none;
     align-items: center;
@@ -123,12 +127,11 @@ body {
 
 .navigation-user .navigation-list-item {
     min-width: 42px;
-    min-height: 66px;
+    min-height: 18px;
 }
 
-.navigation-main-items .navigation-list-item a:last-child {
+.navigation-main-items .navigation-list-item:last-child a {
     margin-right: 62px;
-    /*не понимаю, почему применилось ко всем пунктам списка, а не только к последнему" */
 }
 
 .navigation-link-wanting-here {
@@ -151,13 +154,6 @@ body {
     letter-spacing: -0.1em;
 }
 
-.main-container {
-    background-image: url("../images/sedona-background-mainpage.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    padding-top: 51px;
-    padding-bottom: 0px;
-}
 
 .search-image {
     background-image: url(".../images/search.svg");
@@ -171,8 +167,13 @@ body {
 
 .welcome-text {
     text-align: center;
-    margin-botttom: 57px;
-    /*не уверена, что это нужно.. */
+    margin-bottom: 57px;
+    background-image: url("../images/sedona-background-mainpage.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding-top: 51px;
+    padding-bottom: 82px;
+    margin-bottom: 0;
 }
 
 .advantages {
@@ -199,6 +200,10 @@ body {
     margin-bottom: 31px;
 }
 
+.advantages-canyon-picture {
+    order: -1;
+}
+
 .reasons-why-sedona-is-better {
     font-size: 22px;
     line-height: 26px;
@@ -206,7 +211,7 @@ body {
     font-weight: 400;
     display: block;
     margin-bottom: 90px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .advantages-list {
@@ -217,12 +222,6 @@ body {
     justify-content: center;
     flex-direction: column;
     list-style-type: none;
-}
-
-
-.advantages-list li:not(img) {
-    width: 400px;
-    min-height: 384px;
 }
 
 .advantages .advantages-description {
@@ -245,11 +244,11 @@ body {
 .advantages h3 {
     font-size: 24px;
     line-height: 28px;
-    margin: 0px;
+    margin: 0;
 }
 
 .column-direction p {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 30px;
 }
 
@@ -260,16 +259,20 @@ body {
 .column-direction {
     display: flex;
     flex-direction: column;
-    min-width: 400px;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 384px;
     padding: 20px;
-    /* не понимаю, почему в некоторых преимуществах верхний отступ стал 80px */
+    width: 400px;
+    min-height: 384px;
 }
 
 
 .list-of-advantages-main .column-direction {
     padding-top: 80px;
+}
+
+.second-part-advantages-list .column-direction {
+    padding-top: 103px;
 }
 
 li.advantages-item h3 {
@@ -278,18 +281,22 @@ li.advantages-item h3 {
 }
 
 
+.list-of-advantages-main .advantages-item {
+    padding-top: 182px;
+}
+
 
 
 .advantage-2 {
     background-image: url("../images/advantages/living.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 163px 80px;
 }
 
 .advantage-3 {
     background-image: url("../images/advantages/food.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 163px 80px;
 }
 
 /* не понимаю , как поместить иконки в преимуществах */
@@ -297,13 +304,23 @@ li.advantages-item h3 {
 .advantage-4 {
     background-image: url("../images/advantages/souvenir.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 168px 80px;
 }
 
 .advantage-1,
 .advantage-5 {
     background-color: #82B3D3;
     display: flex;
+}
+
+.real-city {
+    padding-top: 92px;
+}
+
+.bridge-advantage {
+    background-color: #82B3D3;
+    display: flex;
+    padding-top: 92px;
 }
 
 
@@ -334,7 +351,7 @@ li.advantages-item h3 {
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
-    margin: 0px;
+    margin: 0;
     margin-bottom: 29px;
 }
 
@@ -374,14 +391,21 @@ li.advantages-item h3 {
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
-    margin: 0px;
+    margin: 0;
     margin-bottom: 29px;
 
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .footer-background {
     text-align: center;
     padding-bottom: 94px;
+    padding-top: 94px;
 }
 
 .footer-background-main-page {
@@ -390,7 +414,7 @@ li.advantages-item h3 {
 
 .only-useful-info {
     margin-bottom: 46px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .newsletter-button {
@@ -401,6 +425,18 @@ li.advantages-item h3 {
     color: #FFFFFF;
     background-color: #82B3D3;
     font-family: inherit;
+    padding: 12px 15px;
+}
+
+.input-email-subscribe {
+    width: 600px;
+    padding-left: 22px;
+    padding-top: 20px;
+    padding-bottom: 19px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    background: #F2F2F2;
 }
 
 .footer-bottom {
@@ -436,7 +472,7 @@ li.advantages-item h3 {
 }
 
 .social-media-link {
-    margin-right: 0px;
+    margin-right: 0;
     width: 47px;
     height: 40px;
     display: block;
@@ -446,7 +482,7 @@ li.advantages-item h3 {
 
 
 .social-media-item:last-child {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .inner-header {
@@ -470,16 +506,17 @@ li.advantages-item h3 {
 }
 
 .breadcumbs-item:last-child {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .breadcrumbs-item-hotels {
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 .breadcumbs {
-    background-image: url("../images/arrow-to-the-right.svg");
-    background-repeat: no-repeat;
+    /* background-image: url("../images/arrow-to-the-right.svg");
+    background-repeat: no-repeat; */
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -488,9 +525,11 @@ li.advantages-item h3 {
 
 .breadcumbs-link-to-mainpage {
     background-image: url("../images/union.svg");
-    /* не понимаю, почему домик не отображается в браузере */
     background-repeat: no-repeat;
     background-position: center;
+    min-width: 12px;
+    min-height: 12px;
+    display: block;
 }
 
 fieldset {
@@ -500,6 +539,7 @@ fieldset {
 .catalog-filters {
     background-image: url("../images/background-image-filters.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     padding-left: 70px;
     padding-top: 35px;
 }
@@ -549,7 +589,7 @@ section.hotel-catalog label {
     line-height: 36px;
     text-transform: uppercase;
     font-weight: 700;
-    margin: 0px;
+    margin: 0;
 }
 
 .the-cheapest {
@@ -572,7 +612,7 @@ section.hotel-catalog label {
 }
 
 .vision-per-page .button:last-child {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .button-show-gallery {
@@ -631,8 +671,10 @@ section.hotel-catalog label {
     width: 140px;
 }
 
-.button-productlist-wanting-here {
+.navigation-link-wanting-here {
     padding: 9px 15px 8px;
+    width: 160px;
+    display: block;
 }
 
 
@@ -666,10 +708,8 @@ section.hotel-catalog label {
     margin: 0;
     padding: 0;
     padding-left: 73px;
-    padding-right: 71px;
     display: flex;
     justify-content: space-between;
-    width: 1056px;
     margin-bottom: 25px;
 }
 
@@ -741,8 +781,4 @@ section.hotel-catalog label {
 
 .website-developer {
     width: 115px;
-}
-
-.button-productlist-wanting-here {
-    padding: 9px 15px 8px;
 }
