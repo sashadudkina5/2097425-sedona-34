@@ -667,6 +667,7 @@ section.hotel-catalog label {
 
 .product-card-image {
     grid-area: img;
+    object-fit: contain;
 }
 
 .product-card p,
