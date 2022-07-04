@@ -118,7 +118,6 @@ body {
     text-transform: capitalize;
     text-decoration: none;
     display: block;
-    height: 66px;
     margin-right: 34px;
     list-style-type: none;
     padding-top: 20px;
@@ -293,21 +292,19 @@ li.advantages-item h3 {
 .advantage-2 {
     background-image: url("../images/advantages/living.svg");
     background-repeat: no-repeat;
-    background-position: 163px 80px;
+    background-position: 50% 80px;
 }
 
 .advantage-3 {
     background-image: url("../images/advantages/food.svg");
     background-repeat: no-repeat;
-    background-position: 163px 80px;
+    background-position: 50% 80px;
 }
-
-/* не понимаю , как поместить иконки в преимуществах */
 
 .advantage-4 {
     background-image: url("../images/advantages/souvenir.svg");
     background-repeat: no-repeat;
-    background-position: 168px 80px;
+    background-position: 50% 80px;
 }
 
 .advantage-1,
@@ -638,6 +635,7 @@ section.hotel-catalog label {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
+    grid-area: h3;
 }
 
 .product-list {
@@ -645,14 +643,50 @@ section.hotel-catalog label {
     padding-left: 73px;
     padding-right: 71px;
     padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin: 0;
+    margin-bottom: 96px;
     list-style-type: none;
-
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    column-gap: 18px;
 
 }
+
+.product-card {
+    padding: 20px;
+    display: grid;
+    grid-template-areas:
+        "img img img img"
+        "h3 h3 h3 h3"
+        "p-hotel p-hotel . p-price"
+        /* почему-то p-price все равно попал не в ту ячейку*/
+        "button-details button-details . favorites"
+        "stars stars . rate";
+    row-gap: 16px;
+}
+
+.product-card-image {
+    grid-area: img;
+}
+
+.product-card p,
+h3 {
+    margin: 0;
+
+}
+
+.product-card p:nth-child(1) {
+    grid-area: p-hotel;
+}
+
+.product-card p:nth-child(2) {
+    grid-area: p-price;
+    grid-column: span 2;
+    /* не понимаю, почему не применилось, почему элемент остался в левой */
+}
+
+
+
 
 .product-list p {
 
@@ -672,6 +706,7 @@ section.hotel-catalog label {
     padding: 9px 22px 8px 23px;
     display: block;
     width: 140px;
+    grid-area: rate;
 }
 
 .navigation-link-wanting-here {
@@ -690,12 +725,15 @@ section.hotel-catalog label {
     text-transform: uppercase;
     color: #FFFFFF;
     text-decoration: none;
+    padding: 9px 15px;
 }
 
 .button-details {
     background-color: #756157;
     text-decoration: none;
+    grid-area: button-details;
 }
+
 
 .added-to-favorites {
     background-color: #7DB54F;
@@ -705,6 +743,11 @@ section.hotel-catalog label {
 .button-add-to-favorites {
     background-color: #82B3D3;
     text-decoration: none;
+}
+
+.button-add-to-favorites,
+.added-to-favorites {
+    grid-area: favorites;
 }
 
 .filters-bottom-container {
