@@ -378,10 +378,10 @@ li.advantages-item h3 {
     color: #FFFFFF;
     background-color: #000000;
     background-repeat: no-repeat;
-    background-size: 1200px;
+    background-size: cover;
     text-align: center;
     padding-bottom: 94px;
-    padding-top: 92px;
+    padding-top: 94px;
 }
 
 
@@ -404,10 +404,6 @@ li.advantages-item h3 {
 .footer-background {
     text-align: center;
     padding-bottom: 94px;
-    padding-top: 94px;
-}
-
-.footer-background-main-page {
     padding-top: 94px;
 }
 
@@ -654,15 +650,20 @@ section.hotel-catalog label {
 .product-card {
     padding: 20px;
     display: grid;
-    grid-template-rows: 211px min-content min-content 37px 37px;
-    grid-template-columns: min-content min-content 20px 140px;
+    grid-template-columns: 140px 140px;
     grid-template-areas:
-        "img img img img"
-        "h3 h3 h3 h3"
-        "p-hotel p-hotel . p-price"
-        "button-details button-details . favorites"
-        "stars stars . rate";
+        "img img"
+        "h3 h3"
+        "p-hotel p-price"
+        "button-details favorites"
+        "stars rate";
     row-gap: 16px;
+    column-gap: 20px;
+}
+
+.stars {
+    grid-area: stars;
+    padding-top: 10px;
 }
 
 .product-card-image {
@@ -677,13 +678,10 @@ section.hotel-catalog label {
 
 .product-card p:nth-of-type(1) {
     grid-area: p-hotel;
-    grid-column: span 2;
 }
 
 .product-card p:nth-of-type(2) {
     grid-area: p-price;
-    grid-column: span 2;
-    grid-column-start: 4;
 }
 
 
