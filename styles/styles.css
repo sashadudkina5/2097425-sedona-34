@@ -53,7 +53,6 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-
 }
 
 .mainpage-header {
@@ -61,8 +60,27 @@ body {
     padding-right: 70px;
 }
 
+.logo {
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: -5px;
+    z-index: 1;
+    /* появилась белая полоска сверху( */
+}
+
+.link-logo {
+    position: relative;
+    display: block;
+    width: 139px;
+    height: 70px;
+}
+
 .navigation-logo {
     margin-right: 30px;
+    position: relative;
 }
 
 .main-container {
@@ -107,29 +125,32 @@ body {
     justify-items: flex-end;
     list-style-type: none;
     align-items: center;
-    /* не понимаю, почему кнопка "хочу сюда" не выровнялась */
 }
 
 
 .navigation-link {
     color: inherit;
     font-weight: 700;
+    font-size: 20px;
     text-transform: capitalize;
     text-decoration: none;
     display: block;
-    margin-right: 34px;
+    margin-right: 23px;
     list-style-type: none;
     padding-top: 20px;
+    position: relative;
 }
 
 
 .navigation-user .navigation-list-item {
     min-width: 42px;
     min-height: 18px;
+    text-align: center;
+    display: block;
 }
 
 .navigation-main-items .navigation-list-item:last-child a {
-    margin-right: 62px;
+    margin-right: 23px;
 }
 
 .navigation-link-wanting-here {
@@ -141,6 +162,9 @@ body {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
+    padding: 9px 15px 8px;
+    width: 160px;
+    display: block;
 }
 
 .number-of-favorites {
@@ -149,18 +173,51 @@ body {
     font-weight: 400;
     font-size: 10px;
     line-height: 13px;
-    letter-spacing: -0.1em;
-}
-
-
-.search-image {
-    background-image: url(".../images/search.svg");
-    background-repeat: no-repeat;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    padding-top: 3px;
+    top: -6px;
+    left: 12px;
 }
 
 .favorites-image {
-    background-image: url(".../images/favorite.svg");
-    background-repeat: no-repeat;
+    display: block;
+    min-width: 19px;
+    min-height: 18px;
+    position: relative;
+}
+
+.search-image {
+    display: block;
+    min-width: 19px;
+    min-height: 18px;
+}
+
+.navigation-icon {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.navigation-link svg {
+    fill: #000;
+}
+
+.navigation-link svg:hover {
+    fill: #756157;
+}
+
+.navigation-link svg:focus {
+    fill: #756157;
+}
+
+.navigation-link svg:active {
+    fill: rgba(117, 97, 87, 0.3);
 }
 
 .welcome-text {
@@ -172,6 +229,19 @@ body {
     padding-top: 51px;
     padding-bottom: 82px;
     margin-bottom: 0;
+    position: relative;
+}
+
+.welcome-text::after {
+    position: absolute;
+    content: url('../images/vector-after-heading.svg');
+    margin: auto;
+    width: 1200px;
+    height: 57px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: -425px;
 }
 
 .advantages {
@@ -342,10 +412,6 @@ li.advantages-item h3 {
     text-align: center;
 }
 
-.link-to-catalog-button {
-    margin-bottom: 93px;
-}
-
 .interested-question {
     font-size: 30px;
     line-height: 36px;
@@ -370,8 +436,71 @@ li.advantages-item h3 {
     text-transform: uppercase;
     text-decoration: none;
     padding: 12px 15px;
+    margin-bottom: 93px;
+    display: block;
+    min-width: 574px;
 }
 
+.link-to-catalog:hover,
+.navigation-link-wanting-here:hover {
+    background: #615048;
+}
+
+.link-to-catalog:focus,
+.navigation-link-wanting-here:focus {
+    background: #615048;
+}
+
+.link-to-catalog:active,
+.navigation-link-wanting-here:active {
+    background: #756157;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.button-details:hover {
+    background: #615048;
+}
+
+.button-details:focus {
+    background: #615048;
+}
+
+.button-details:active {
+    background: #756157;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.added-to-favorites:hover {
+    background: #6C9E42;
+}
+
+.added-to-favorites:focus {
+    background: #6C9E42;
+}
+
+.added-to-favorites:active {
+    background: #7DB54F;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.button-add-to-favorites:hover,
+.search-hotel:hover,
+.newsletter-button:hover {
+    background: #68A2CA;
+}
+
+.button-add-to-favorites:focus,
+.search-hotel:focus,
+.newsletter-button:focus {
+    background: #68A2CA;
+}
+
+.button-add-to-favorites:active,
+.search-hotel:active,
+.newsletter-button:active {
+    background: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
+}
 
 .footer-background-main-page {
     background-image: url("../images/background.jpg");
@@ -421,6 +550,7 @@ li.advantages-item h3 {
     background-color: #82B3D3;
     font-family: inherit;
     padding: 12px 15px;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .input-email-subscribe {
@@ -454,7 +584,19 @@ li.advantages-item h3 {
     background-color: #FFFFFF;
     text-decoration: none;
     width: 720px;
+}
 
+.contact-number:hover {
+    color: #756157;
+}
+
+.contact-number:focus {
+    color: #756157;
+}
+
+.contact-number:active {
+    color: rgba(117, 97, 87, 0.3);
+    ;
 }
 
 .list-of-social-media {
@@ -473,8 +615,14 @@ li.advantages-item h3 {
     display: block;
     text-align: center;
     padding-top: 12px;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
 }
 
+/* .social-media-link:hover {
+    fill:#68A2CA;
+} */
 
 .social-media-item:last-child {
     margin-right: 0;
@@ -497,7 +645,16 @@ li.advantages-item h3 {
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
-    margin-right: 25px;
+    position: relative;
+}
+
+.breadcumbs-arrow {
+    position: absolute;
+    margin: auto 0;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    left: -15px;
 }
 
 .breadcumbs-item:last-child {
@@ -507,15 +664,29 @@ li.advantages-item h3 {
 .breadcrumbs-item-hotels {
     color: #FFFFFF;
     text-decoration: none;
+    display: block;
 }
 
+.breadcrumbs-item-hotels:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-item-hotels:focus {
+    color: #FFFFFF;
+}
+
+.breadcrumbs-item-hotels:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
 .breadcumbs {
-    /* background-image: url("../images/arrow-to-the-right.svg");
-    background-repeat: no-repeat; */
     padding: 0;
     margin: 0;
     list-style-type: none;
     display: flex;
+    align-items: center;
+    padding-left: 2px;
 }
 
 .breadcumbs-link-to-mainpage {
@@ -525,6 +696,19 @@ li.advantages-item h3 {
     min-width: 12px;
     min-height: 12px;
     display: block;
+    margin-right: 25px;
+}
+
+.breadcumbs-link-to-mainpage:hover {
+    opacity: 0.6;
+}
+
+.breadcumbs-link-to-mainpage:focus {
+    opacity: 1;
+}
+
+.breadcumbs-link-to-mainpage:active {
+    opacity: 0.3;
 }
 
 fieldset {
@@ -568,6 +752,36 @@ section.hotel-catalog label {
     text-align: center;
     color: #FFFFFF;
     font-family: inherit;
+    background-color: transparent;
+}
+
+.reset-search:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.reset-search:focus {
+    color: #FFFFFF;
+}
+
+.reset-search:active {
+    color: rgba(255, 255, 255, 0.3);
+    ;
+}
+
+.navigation-main-items .navigation-list-item {
+    position: relative;
+}
+
+
+.navigation-link-current::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    border: 2px solid #756257;
+    bottom: -26px;
 }
 
 .result-of-search-container {
@@ -600,30 +814,62 @@ section.hotel-catalog label {
     display: flex;
 }
 
-.vision-per-page .button {
+.vision-per-page .button-vision {
     width: 48px;
     height: 48px;
     margin-right: 8px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+}
+
+.vision-per-page .button-vision:hover {
+    border: 2px solid #000;
+}
+
+.vision-per-page .button-vision:focus {
+    border: 2px solid #81B3D3;
+}
+
+.vision-per-page .button-vision:active {
+    border: 2px solid #000;
+    ;
+}
+
+.button {
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+}
+
+.button:not(.newsletter-button) {
+    border-radius: 4px;
 }
 
 .vision-per-page .button:last-child {
     margin-right: 0;
 }
 
-.button-show-gallery {
+.vision-per-page .button-show-gallery {
     background-image: url("../images/catalog-page-view/show-gallery.svg");
     background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #000;
+    border-radius: 4px;
 }
 
 .button-one-product-per-page {
     background-image: url("../images/catalog-page-view/one-product-per-page.svg");
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .button-show-list {
     background-image: url("../images/catalog-page-view/show-list.svg");
     background-repeat: no-repeat;
+    background-position: center;
 }
+
+
 
 
 .product-card-title {
@@ -644,7 +890,18 @@ section.hotel-catalog label {
     display: grid;
     grid-template-columns: 340px 340px 340px;
     column-gap: 18px;
+    position: relative;
+}
 
+.product-list::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #E6E6E6;
+    width: 1055px;
+    bottom: -60px;
+    right: 72px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-card {
@@ -704,12 +961,6 @@ section.hotel-catalog label {
     display: block;
     width: 140px;
     grid-area: rate;
-}
-
-.navigation-link-wanting-here {
-    padding: 9px 15px 8px;
-    width: 160px;
-    display: block;
 }
 
 
@@ -776,6 +1027,7 @@ section.hotel-catalog label {
     display: block;
     margin-right: 8px;
     padding-top: 11px;
+    border-radius: 4px;
 
 }
 
@@ -783,6 +1035,28 @@ section.hotel-catalog label {
     color: #000000;
     background-color: #F2F2F2;
 }
+
+.pagination-link:not(.pagination-current) {
+    border: 1px solid #82B3D3;
+}
+
+
+.pagination-link:not(.pagination-current):hover {
+    background: #68A2CA;
+    border: 1px solid #82B3D3;
+}
+
+.pagination-link:not(.pagination-current):focus {
+    background: #68A2CA;
+    border: 1px solid #82B3D3;
+}
+
+.pagination-link:not(.pagination-current):active {
+    background-color: ##82B3D3;
+    border: 1px solid #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
+}
+
 
 .number-of-hotels-shown-perpage {
     font-size: 18px;
@@ -796,7 +1070,6 @@ section.hotel-catalog label {
     background-position: right;
     display: block;
     margin-left: auto;
-    /* не понимаю, почему элемент не прижался к правому краю */
     width: 160px;
 }
 
