@@ -1177,3 +1177,17 @@ section.hotel-catalog label {
 .website-developer {
     width: 115px;
 }
+
+.website-developer-link svg {
+    fill: #000000;
+}
+
+.website-developer-link svg:hover {
+    fill: #756157;
+}
+.website-developer-link svg:focus {
+    fill: #756157;
+}
+.website-developer-link svg:active {
+    fill:  rgba(117, 97, 87, 0.3);
+}
