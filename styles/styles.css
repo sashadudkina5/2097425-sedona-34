@@ -60,22 +60,17 @@ body {
     padding-right: 70px;
 }
 
-.logo {
-    position: absolute;
-    margin: auto;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: -5px;
-    z-index: 1;
-    /* появилась белая полоска сверху( */
-}
-
 .link-logo {
     position: relative;
     display: block;
     width: 139px;
     height: 70px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 .navigation-logo {
@@ -115,6 +110,7 @@ body {
     flex-wrap: wrap;
     padding-left: 17px;
     width: 490px;
+    margin-left: 139px;
 }
 
 .navigation-user {
@@ -139,6 +135,7 @@ body {
     list-style-type: none;
     padding-top: 20px;
     position: relative;
+    padding-bottom: 19px;
 }
 
 
@@ -178,7 +175,7 @@ body {
     height: 20px;
     border-radius: 10px;
     padding-top: 3px;
-    top: -6px;
+    top: 0;
     left: 12px;
 }
 
@@ -212,9 +209,15 @@ body {
     fill: #756157;
 }
 
+.navigation-link svg:focus-visible {
+    fill: #756157;
+    outline: none;
+}
+
 .navigation-link svg:focus {
     fill: #756157;
 }
+
 
 .navigation-link svg:active {
     fill: rgba(117, 97, 87, 0.3);
@@ -446,6 +449,12 @@ li.advantages-item h3 {
     background: #615048;
 }
 
+.link-to-catalog:focus-visible,
+.navigation-link-wanting-here:focus-visible {
+    background: #615048;
+    outline: none;
+}
+
 .link-to-catalog:focus,
 .navigation-link-wanting-here:focus {
     background: #615048;
@@ -461,6 +470,11 @@ li.advantages-item h3 {
     background: #615048;
 }
 
+.button-details:focus-visible {
+    background: #615048;
+    outline: none;
+}
+
 .button-details:focus {
     background: #615048;
 }
@@ -472,6 +486,11 @@ li.advantages-item h3 {
 
 .added-to-favorites:hover {
     background: #6C9E42;
+}
+
+.added-to-favorites:focus-visible {
+    background: #6C9E42;
+    outline: none;
 }
 
 .added-to-favorites:focus {
@@ -487,6 +506,13 @@ li.advantages-item h3 {
 .search-hotel:hover,
 .newsletter-button:hover {
     background: #68A2CA;
+}
+
+.button-add-to-favorites:focus-visible,
+.search-hotel:focus-visible,
+.newsletter-button:focus-visible {
+    background: #68A2CA;
+    outline: none;
 }
 
 .button-add-to-favorites:focus,
@@ -590,6 +616,11 @@ li.advantages-item h3 {
     color: #756157;
 }
 
+.contact-number:focus-visible {
+    color: #756157;
+    outline: none;
+}
+
 .contact-number:focus {
     color: #756157;
 }
@@ -620,9 +651,28 @@ li.advantages-item h3 {
     display: inline-block;
 }
 
-/* .social-media-link:hover {
-    fill:#68A2CA;
-} */
+.social-media-link svg {
+    fill: #83B3D3;
+}
+
+.social-media-link svg:hover {
+    fill: #68A2CA;
+}
+
+.social-media-link svg:focus-visible {
+    fill: #68A2CA;
+    outline: none;
+}
+
+.social-media-link svg:focus {
+    fill: #68A2CA;
+}
+
+.social-media-link svg:active {
+    fill: rgba(104, 162, 202, 0.3);
+}
+
+
 
 .social-media-item:last-child {
     margin-right: 0;
@@ -671,6 +721,11 @@ li.advantages-item h3 {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.breadcrumbs-item-hotels:focus-visible {
+    color: #FFFFFF;
+    outline: none;
+}
+
 .breadcrumbs-item-hotels:focus {
     color: #FFFFFF;
 }
@@ -701,6 +756,11 @@ li.advantages-item h3 {
 
 .breadcumbs-link-to-mainpage:hover {
     opacity: 0.6;
+}
+
+.breadcumbs-link-to-mainpage:focus-visible {
+    opacity: 1;
+    outline: visible;
 }
 
 .breadcumbs-link-to-mainpage:focus {
@@ -759,6 +819,11 @@ section.hotel-catalog label {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.reset-search:focus-visible {
+    color: #FFFFFF;
+    outline: none;
+}
+
 .reset-search:focus {
     color: #FFFFFF;
 }
@@ -778,10 +843,11 @@ section.hotel-catalog label {
     content: "";
     right: 0;
     left: 0;
-    height: 0;
+    height: 2px;
     width: 100%;
-    border: 2px solid #756257;
-    bottom: -26px;
+    border-bottom: 2px solid #756257;
+    bottom: 0;
+    z-index: 1;
 }
 
 .result-of-search-container {
@@ -826,6 +892,11 @@ section.hotel-catalog label {
     border: 2px solid #000;
 }
 
+.vision-per-page .button-vision:focus-visible {
+    border: 2px solid #81B3D3;
+    outline: none;
+}
+
 .vision-per-page .button-vision:focus {
     border: 2px solid #81B3D3;
 }
@@ -853,6 +924,9 @@ section.hotel-catalog label {
     background-image: url("../images/catalog-page-view/show-gallery.svg");
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.vision-per-page .vision-current {
     border: 2px solid #000;
     border-radius: 4px;
 }
@@ -1046,13 +1120,19 @@ section.hotel-catalog label {
     border: 1px solid #82B3D3;
 }
 
+.pagination-link:not(.pagination-current):focus-visible {
+    background: #68A2CA;
+    border: 1px solid #82B3D3;
+    outline: none;
+}
+
 .pagination-link:not(.pagination-current):focus {
     background: #68A2CA;
     border: 1px solid #82B3D3;
 }
 
 .pagination-link:not(.pagination-current):active {
-    background-color: ##82B3D3;
+    background-color: #82B3D3;
     border: 1px solid #82B3D3;
     color: rgba(255, 255, 255, 0.3);
 }
