@@ -62,13 +62,13 @@
 
         <header class="inner-header">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
-          <ol class="breadcumbs">
-            <li class="breadcumbs-item">
-              <a class="breadcumbs-link-to-mainpage" href="index.html">
+          <ol class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link-to-mainpage" href="index.html">
               </a>
             </li>
-            <li class="breadcumbs-item">
-              <svg class="breadcumbs-arrow" aria-hidden="true" focusable="false" width="6" height="9" fill="none"
+            <li class="breadcrumbs-item">
+              <svg class="breadcrumbs-arrow" aria-hidden="true" focusable="false" width="6" height="9" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M5.05 4.07 1.25.67c-.2-.2-.6-.2-.9 0-.3.2-.2.6 0 .8l3.3 3-3.2 3c-.2.2-.2.6 0 .8 0 .1.3.2.4.2.1 0 .3-.1.4-.2l3.8-3.4c.3-.2.3-.6 0-.8Z"
@@ -81,36 +81,79 @@
 
         <section class="hotel-catalog">
           <h2 class="visually-hidden">Список товаров с фильтрами</h2>
-          <form action="#" method="get">
+          <form class="filters-catalog-form" action="#" method="get">
             <fieldset class="infrustructure-list">
               <legend class="category">Инфраструктура:</legend>
 
-              <input class="infrustructure-item" type="checkbox" name="pool" value="pool" id="pool" checked>
-              <label for="pool">Бассейн</label>
+              <label class="infrustructure-list-label">
+                <input class="infrustructure-item-input visually-hidden" type="checkbox" name="pool" value="pool"
+                  id="pool" checked>
+                <span class="control-mark-checkbox"></span>
+                <span class="infrustructure-item-name">Бассейн</span>
+              </label>
 
-              <input class="infrustructure-item" type="checkbox" name="parking" value="parking" id="parking" checked>
-              <label for="parking">Парковка</label>
+              <label class="infrustructure-list-label">
+                <input class="infrustructure-item-input visually-hidden" type="checkbox" name="parking" value="parking"
+                  id="parking" checked>
+                <span class="control-mark-checkbox"></span>
+                <span class="infrustructure-item-name">Парковка</span>
+              </label>
 
-              <input class="infrustructure-item" type="checkbox" name="wifi" value="wifi" id="wifi">
-              <label for="wifi">Wi-Fi</label>
+              <label class="infrustructure-list-label">
+                <input class="infrustructure-item-input visually-hidden" type="checkbox" name="wifi" value="wifi"
+                  id="wifi">
+                <span class="control-mark-checkbox"></span>
+                <span class="infrustructure-item-name">Wi-Fi</span>
+              </label>
             </fieldset>
-
 
 
             <fieldset class="livingtype-list">
-              <p class="category">Тип жилья</p>
-              <input class="livingtype-item" type="radio" id="hotel" name="livingtype" checked>
-              <label for="hotel">Гостиница</label>
+              <legend class="category">Тип жилья</legend>
 
-              <input class="livingtype-item" type="radio" id="motel" name="livingtype">
-              <label for="motel">Мотель</label>
+              <label class="livingtype-list-label">
+                <input class="livingtype-item-input visually-hidden" type="radio" id="hotel" name="livingtype" checked>
+                <span class="control-mark-radio"></span>
+                <span class="livingtype-item-name">Гостиница</span>
+              </label>
 
-              <input class="livingtype-item" type="radio" id="apartments" name="livingtype">
-              <label for="apartments">Апартаменты</label>
+              <label class="livingtype-list-label">
+                <input class="livingtype-item-input visually-hidden" type="radio" id="motel" name="livingtype">
+                <span class="control-mark-radio"></span>
+                <span class="livingtype-item-name">Мотель</span>
+              </label>
+
+              <label class="livingtype-list-label">
+                <input class="livingtype-item-input visually-hidden" type="radio" id="apartments" name="livingtype">
+                <span class="control-mark-radio"></span>
+                <span class="livingtype-item-name">Апартаменты</span>
+              </label>
             </fieldset>
-            <p class="category">Стоимость, ₽:</p>
-            <button class="search-hotel button" type="submit">Применить</button>
-            <button class="reset-search button" type="reset">Сбросить</button>
+
+            <fieldset class="price-filter-fieldset">
+              <legend class="price-filter-title">Стоимость, ₽:</legend>
+              <div class="price-range">
+                <label class="price-range-label"><input class="price-range-input" type="number" value="0"
+                    name="min-price" style="width:80px"><span class="input-price-from-to">от</span></label>
+                <label class="price-range-label"><input class="price-range-input" value="9000" name="max-price"
+                    style="width:80px"><span class="input-price-from-to">до</span></label>
+              </div>
+
+              <div class="visual-price-range">
+                <div class="price-range-bar" style="left: 0px; width: 228px">
+                  <button class="range-toggle toggle-min" type="button">
+
+                  </button>
+                  <button class="range-toggle toggle-max" type="button">
+
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <div class="buttons-range-price">
+              <button class="search-hotel button" type="submit">Применить</button>
+              <button class="reset-search button" type="reset">Сбросить</button>
+            </div>
           </form>
         </section>
 

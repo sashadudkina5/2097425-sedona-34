@@ -214,6 +214,60 @@
       </div>
     </footer>
   </div>
+
+  <div class="modal-window-container">
+    <div class="modal search-for-hotel-modal">
+      <button class="modal-close-button button">
+        <svg class="close-button-modal" aria-hidden="true" focusable="false" width="53" height="53" viewBox="0 0 53 53"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="26.5" cy="26.5" r="26.5" />
+          <path
+            d="M33 21.2 31.8 20l-5.3 5.3-5.3-5.3-1.2 1.2 5.3 5.3-5.3 5.3 1.2 1.2 5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3 5.3-5.3Z" />
+        </svg>
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+
+          <div class="fieldset">
+
+            <legend class="modal-form-category arrival">Дата заезда:</legend>
+            <label class="modal-form-label arrival-date">
+              <input class="modal-form-input" type="date" value="2020-04-27" name="arrival-date">
+              <p class="error-alert">Мы не можем отправить вас в прошлое.</p>
+            </label>
+
+
+            <legend class="modal-form-category departure">Дата выезда:</legend>
+            <label class="modal-form-label departure-date">
+              <input class="modal-form-input" type="date" value="2021-09-01" name="departure-date">
+              <p class="hotels-found">На эти даты есть свободные номера. Пока есть.</p>
+            </label>
+
+
+            <div class="adults-and-children">
+              <legend class="modal-form-category adults">Взрослые:</legend>
+              <label class="modal-form-label number-of-adults">
+                <input class="modal-form-input" type="number" value="2" name="number-of-adults">
+              </label>
+
+              <legend class="modal-form-category children">Дети</legend>
+              <label class="modal-form-label number-of-children">
+                <input class="modal-form-input" type="number" value="1" name="number-of-children">
+              </label>
+
+            </div>
+          </div>
+          <button class="modal-find-hotel button" type="submit">Найти</button>
+
+
+        </form>
+      </section>
+
+    </div>
+
+  </div>
 </body>
 
 </html>

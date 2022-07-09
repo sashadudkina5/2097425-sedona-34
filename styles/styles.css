@@ -92,8 +92,6 @@ body {
     align-items: center;
 }
 
-
-
 .navigation-list {
     margin: 0;
     padding: 0;
@@ -592,6 +590,7 @@ li.advantages-item h3 {
 }
 
 .input-email-subscribe {
+    margin: 0;
     width: 600px;
     padding-left: 22px;
     padding-top: 20px;
@@ -600,6 +599,24 @@ li.advantages-item h3 {
     line-height: 21px;
     color: #000000;
     background: #F2F2F2;
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+}
+
+
+.input-email-subscribe:hover {
+    outline: none;
+    background: #E6E6E6;
+}
+
+.input-email-subscribe:focus {
+    background: #E6E6E6;
+    outline: none;
+}
+
+.input-email-subscribe:focus-visible {
+    outline: none;
+    background: #E6E6E6;
 }
 
 .footer-bottom {
@@ -703,14 +720,14 @@ li.advantages-item h3 {
     margin-bottom: 10px;
 }
 
-.breadcumbs-item {
+.breadcrumbs-item {
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
     position: relative;
 }
 
-.breadcumbs-arrow {
+.breadcrumbs-arrow {
     position: absolute;
     margin: auto 0;
     right: auto;
@@ -719,7 +736,7 @@ li.advantages-item h3 {
     left: -15px;
 }
 
-.breadcumbs-item:last-child {
+.breadcrumbs-item:last-child {
     margin-right: 0;
 }
 
@@ -747,16 +764,17 @@ li.advantages-item h3 {
 }
 
 
-.breadcumbs {
+.breadcrumbs {
     padding: 0;
     margin: 0;
     list-style-type: none;
     display: flex;
     align-items: center;
     padding-left: 2px;
+    margin-bottom: 40px;
 }
 
-.breadcumbs-link-to-mainpage {
+.breadcrumbs-link-to-mainpage {
     background-image: url("../images/union.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -766,25 +784,29 @@ li.advantages-item h3 {
     margin-right: 25px;
 }
 
-.breadcumbs-link-to-mainpage:hover {
+.breadcrumbs-link-to-mainpage:hover {
     opacity: 0.6;
 }
 
-.breadcumbs-link-to-mainpage:focus-visible {
+.breadcrumbs-link-to-mainpage:focus-visible {
     opacity: 1;
     outline: visible;
 }
 
-.breadcumbs-link-to-mainpage:focus {
+.breadcrumbs-link-to-mainpage:focus {
     opacity: 1;
 }
 
-.breadcumbs-link-to-mainpage:active {
+.breadcrumbs-link-to-mainpage:active {
     opacity: 0.3;
 }
 
 fieldset {
     color: #FFFFFF;
+}
+
+.filters-catalog-form {
+    display: flex;
 }
 
 .catalog-filters {
@@ -795,16 +817,284 @@ fieldset {
     padding-top: 35px;
 }
 
-.category {
+.hotel-catalog legend {
     font-weight: 700;
     font-size: 20px;
     line-height: 26px;
     color: #FFFFFF;
 }
 
-section.hotel-catalog label {
+.price-range {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.visual-price-range {
+    position: relative;
+    height: 4px;
+    background-color: #FFFFFF;
+    width: 288px;
+    opacity: 0.3;
+    /* не понимаю, почему это свойство унаследовалось всем остальным элементам */
+}
+
+.price-range-bar {
+    position: absolute;
+    height: 4px;
+    background-color: #FFFFFF;
+    opacity: 1;
+}
+
+.price-range-input {
+    padding-left: 18px;
+    padding-top: 14px;
+    padding-bottom: 13px;
     font-size: 18px;
     line-height: 21px;
+    color: #FFFFFF;
+    background-color: transparent;
+    appearance: textfield;
+    border: none;
+}
+
+.price-range-input::-webkit-outer-spin-button,
+.price-range-input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.price-range-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+    padding-right: 16px;
+    width: 145px;
+}
+
+.price-range label:nth-last-of-type(2) {
+    border-radius: 4px 0px 0px 4px;
+    border-right: 1px solid #FFFFFF;
+}
+
+.price-range label:nth-last-of-type(1) {
+    border-radius: 0px 4px 4px 0px;
+    border-left: 1px solid #FFFFFF;
+}
+
+.price-range label:nth-last-of-type(2):hover {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.price-range label:nth-last-of-type(2):focus {
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-right: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 0px 3px #81B3D2;
+    /* не могу разобраться, как сделать еще внутреннюю обводку */
+}
+
+.price-range label:nth-last-of-type(2):focus-visible {
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-right: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 0px 3px #81B3D2;
+    outline: none;
+}
+
+.price-range label:nth-last-of-type(2):active {
+    background: #756257;
+}
+
+.price-range label:nth-last-of-type(1):hover {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.price-range label:nth-last-of-type(1):focus {
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 0px 3px #81B3D2;
+    /* не могу разобраться, как сделать еще внутреннюю обводку */
+}
+
+.price-range label:nth-last-of-type(1):focus-visible {
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 0px 3px #81B3D2;
+    outline: none;
+}
+
+.price-range label:nth-last-of-type(1):active {
+    background: #756257;
+}
+
+
+.price-filter-title {
+    margin: 0;
+    margin-bottom: 34px;
+}
+
+.input-price-from-to {
+    line-height: 23px;
+    opacity: 0.3;
+    border: none;
+}
+
+.hotel-catalog legend.category {
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.hotel-catalog fieldset {
+    border: none;
+    margin-bottom: 70px;
+    padding: 0;
+}
+
+.range-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: none;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.range-toggle:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+    border: 3px solid #83B3D3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus-visible {
+    border: 3px solid #83B3D3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.range-toggle:active {
+    border: 2px solid #83B3D3;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+    top: -8px;
+}
+
+.toggle-max {
+    top: -8px;
+    right: -8px;
+}
+
+section.hotel-catalog .infrustructure-item-name,
+section.hotel-catalog .livingtype-item-name {
+    font-size: 18px;
+    line-height: 21px;
+    display: block;
+}
+
+.price-filter-fieldset {
+    margin-right: 70px;
+}
+
+.buttons-range-price {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 71px;
+    justify-content: space-between;
+}
+
+.hotel-catalog fieldset:not(.price-filter-fieldset) label:not(:last-of-type) span:last-of-type {
+    margin-bottom: 15px;
+}
+
+.livingtype-list {
+    margin-right: 175px;
+}
+
+.infrustructure-list-label,
+.livingtype-list-label {
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+.infrustructure-item-input[type="checkbox"]:checked+.control-mark-checkbox {
+    background-image: url("../images/checked.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.control-mark-checkbox {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    left: 0;
+    top: 0;
+}
+
+
+.infrustructure-list-label:hover .control-mark-checkbox {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.infrustructure-list-label:focus .control-mark-checkbox {
+    background: rgba(255, 255, 255, 0.6);
+    border: 3px solid #83B3D3;
+}
+
+.infrustructure-list-label:active .control-mark-checkbox {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.infrustructure-list {
+    display: block;
+    margin-right: 70px;
+}
+
+.control-mark-radio {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+}
+
+.livingtype-list-label:hover .control-mark-radio {
+    background: #FFFFFF;
+}
+
+.livingtype-list-label:focus .control-mark-radio {
+    border: 3px solid #83B3D3;
+}
+
+.livingtype-list-label:active .control-mark-radio {
+    background: #FFFFFF;
+}
+
+.livingtype-item-input[type="radio"]:checked+.control-mark-radio::before {
+    position: absolute;
+    content: "";
+    background-color: #3F5E72;
+    border-radius: 10px;
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    left: 5px;
 }
 
 .search-hotel {
@@ -816,6 +1106,8 @@ section.hotel-catalog label {
     background-color: #82B3D3;
     font-family: inherit;
     padding: 14px 15px;
+    height: 48px;
+    min-width: 160px;
 }
 
 .reset-search {
@@ -838,6 +1130,7 @@ section.hotel-catalog label {
 
 .reset-search:focus {
     color: #FFFFFF;
+    outline: 3px solid #83B3D3;
 }
 
 .reset-search:active {
@@ -868,7 +1161,7 @@ section.hotel-catalog label {
     padding-right: 71px;
     padding-top: 55px;
     margin-bottom: 56px;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .number-hotels-found-perpage {
@@ -877,19 +1170,58 @@ section.hotel-catalog label {
     text-transform: uppercase;
     font-weight: 700;
     margin: 0;
+    margin-right: auto;
 }
 
-.the-cheapest {
+.select-controls {
+    display: block;
+    padding-left: 18px;
+    padding-right: 40px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    width: 290px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-color: #FFFFFF;
+    appearance: none;
+    margin-right: 78px;
+    margin-left: auto;
+    /* не понимаю, как корректно расположить элемент горизонтально на нужно месте */
+}
+
+.select-controls option {
     font-size: 18px;
     line-height: 21px;
     color: #333333;
-    background-image: url("../images/arrow.svg");
-    background-repeat: no-repeat;
-    background-position: left;
+}
+
+.select-controls:hover,
+.number-of-hotels-select:hover {
+    border: 2px solid #68A2CA;
+}
+
+.select-controls:focus,
+.number-of-hotels-select:focus {
+    border: 2px solid #68A2CA;
+}
+
+.select-controls:focus-visible,
+.number-of-hotels-select:focus-visible {
+    border: 2px solid #68A2CA;
+    outline: none;
+}
+
+.select-controls:active,
+.number-of-hotels-select:active {
+    border: 2px solid #3F5E72;
 }
 
 .vision-per-page {
     display: flex;
+    margin-left: auto;
 }
 
 .vision-per-page .button-vision {
@@ -918,13 +1250,17 @@ section.hotel-catalog label {
     ;
 }
 
+.vision-per-page .button-vision:last-child {
+    margin-right: 0;
+}
+
 .button {
     cursor: pointer;
     border: none;
     display: inline-block;
 }
 
-.button:not(.newsletter-button) {
+.button:not(.newsletter-button):not(button.modal-close-button):not(.modal-find-hotel) {
     border-radius: 4px;
 }
 
@@ -1154,15 +1490,27 @@ section.hotel-catalog label {
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+    margin: 0;
+    margin-right: 51px;
+
 }
 
 .number-of-hotels-select {
     background-image: url("../images/arrow.svg");
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right 20px center;
     display: block;
     margin-left: auto;
     width: 160px;
+    height: 49px;
+    appearance: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 35px;
+    border: 2px solid #E5E5E5;
+    border-radius: 4px;
+    background-color: #FFFFFF;
 }
 
 .select-dates-mainpage {
@@ -1176,6 +1524,7 @@ section.hotel-catalog label {
 .number-of-hotels-shown-perpage-container {
     display: flex;
     padding-right: 71px;
+    align-items: center;
 }
 
 .number-of-hotels-option {
@@ -1183,7 +1532,6 @@ section.hotel-catalog label {
     line-height: 21px;
     color: #333333;
     padding-left: 20px;
-    /* не сработало */
 }
 
 .website-developer {
@@ -1204,4 +1552,217 @@ section.hotel-catalog label {
 
 .website-developer-link svg:active {
     fill: rgba(117, 97, 87, 0.3);
+}
+
+.modal-window-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.8);
+    z-index: 2;
+}
+
+.modal {
+    position: relative;
+    margin: auto;
+    padding-top: 62px;
+    padding-left: 70px;
+    padding-bottom: 70px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+}
+
+.search-for-hotel-modal {
+    width: 715px;
+}
+
+button.modal-close-button {
+    position: absolute;
+    padding: 0;
+    top: 41px;
+    right: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    width: 53px;
+    height: 53px;
+    border: none;
+}
+
+.modal-close-button svg.close-button-modal circle {
+    fill: #F2F2F2;
+}
+
+.modal-close-button svg.close-button-modal path {
+    fill: #000;
+}
+
+
+.modal-close-button:hover svg.close-button-modal circle {
+    fill: #E6E6E6;
+}
+
+.modal-close-button:focus {
+    fill: #E6E6E6;
+    border: 3px solid #83B3D3;
+    /* не понимаю, как применить тут рамку */
+}
+
+.modal-close-button:focus-visible {
+    fill: #E6E6E6;
+    border: 3px solid #83B3D3;
+    /* не понимаю, как применить тут рамку */
+    outline: none;
+    /* не работает, кнопка съезжает */
+}
+
+.modal-close-button:active svg.close-button-modal circle {
+    fill: #E6E6E6;
+}
+
+.modal-close-button:active svg.close-button-modal path {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.modal-title {
+    margin: 0;
+    margin-bottom: 63px;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.modal-form-category {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+    margin: 0;
+}
+
+.adults-and-children {
+    display: flex;
+    align-items: center;
+}
+
+.adults-and-children label:not(:last-of-type) {
+    margin-right: 56px;
+}
+
+
+.modal-form-input {
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    border: none;
+    color: #000000;
+    padding-top: 15px;
+    padding-left: 19px;
+    padding-bottom: 14px;
+    width: 420px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: "PT Sans", Arial, sans-serif;
+
+
+}
+
+.adults-and-children .modal-form-input {
+    padding-top: 15px;
+    padding-left: 61px;
+    padding-bottom: 14px;
+    padding-right: 62px;
+    width: 133px;
+    color: #000000;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: "PT Sans", Arial, sans-serif;
+    /* не понимаю, почему не отображается число */
+}
+
+.modal-find-hotel {
+    background: #83B3D3;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: block;
+    width: 575px;
+    font-family: "PT Sans", Arial, sans-serif;
+    padding: 12px 26px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.fieldset {
+    display: grid;
+    grid-template-columns: 155px 189px 97px 133px;
+    column-gap: 0;
+    grid-template-areas:
+        "arrival arrival-date arrival-date arrival-date"
+        " . alert alert alert"
+        "departure departure-date departure-date departure-date"
+        ". alert-p alert-p alert-p"
+        "adults adults-amount children children-amount";
+    /* не понимаю, почему встает на ряд выше нужного */
+    align-items: center;
+}
+
+.arrival {
+    grid-area: arrival;
+}
+
+.arrival-date {
+    grid-area: arrival-date;
+}
+
+.departure {
+    grid-area: departure;
+}
+
+
+.departure-date {
+    grid-area: departure-date;
+}
+
+.adults-and-children .adults {
+    grid-area: adults;
+}
+
+.adults-and-children .number-of-adults {
+    grid-area: adults-amount;
+    width: 133px;
+}
+
+.adults-and-children .children {
+    grid-area: children;
+}
+
+.adults-and-children .number-of-children {
+    grid-area: children-amount;
+    width: 133px;
+}
+
+.error-alert {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FF5757;
+    grid-area: alert;
+}
+
+.hotels-found {
+    grid-area: alert-p;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #333333;
 }
