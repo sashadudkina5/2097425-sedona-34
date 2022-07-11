@@ -61,7 +61,6 @@ body {
 }
 
 .link-logo {
-    position: relative;
     display: block;
     width: 139px;
     height: 70px;
@@ -514,28 +513,38 @@ li.advantages-item h3 {
 
 .button-add-to-favorites:hover,
 .search-hotel:hover,
-.newsletter-button:hover {
+.newsletter-button:hover,
+.modal-find-hotel:hover {
     background: #68A2CA;
 }
 
 .button-add-to-favorites:focus-visible,
 .search-hotel:focus-visible,
-.newsletter-button:focus-visible {
+.newsletter-button:focus-visible,
+.modal-find-hotel:focus-visible {
     background: #68A2CA;
     outline: none;
 }
 
 .button-add-to-favorites:focus,
 .search-hotel:focus,
-.newsletter-button:focus {
+.newsletter-button:focus,
+.modal-find-hotel:focus {
     background: #68A2CA;
 }
 
 .button-add-to-favorites:active,
 .search-hotel:active,
-.newsletter-button:active {
+.newsletter-button:active,
+.modal-find-hotel:active {
     background: #82B3D3;
     color: rgba(255, 255, 255, 0.3);
+}
+
+.modal-find-hotel:focus,
+.modal-find-hotel:focus-visible {
+    outline: 3px solid #756257;
+    border-radius: 10px;
 }
 
 .footer-background-main-page {
@@ -586,7 +595,7 @@ li.advantages-item h3 {
     background-color: #82B3D3;
     font-family: inherit;
     padding: 12px 15px;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0 10px 10px 0;
 }
 
 .input-email-subscribe {
@@ -599,8 +608,9 @@ li.advantages-item h3 {
     line-height: 21px;
     color: #000000;
     background: #F2F2F2;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 0 0 10px;
     border: none;
+    font: inherit;
 }
 
 
@@ -617,6 +627,18 @@ li.advantages-item h3 {
 .input-email-subscribe:focus-visible {
     outline: none;
     background: #E6E6E6;
+}
+
+.input-email-subscribe:disabled {
+    outline: none;
+    background: #E6E6E6;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.input-email-subscribe:not(:placeholder-shown) {
+    background: #756257;
+    color: #FFFFFF
 }
 
 .footer-bottom {
@@ -736,8 +758,8 @@ li.advantages-item h3 {
     left: -15px;
 }
 
-.breadcrumbs-item:last-child {
-    margin-right: 0;
+.breadcrumbs-item:not(:last-child) {
+    margin-right: 25px;
 }
 
 .breadcrumbs-item-hotels {
@@ -772,6 +794,7 @@ li.advantages-item h3 {
     align-items: center;
     padding-left: 2px;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .breadcrumbs-link-to-mainpage {
@@ -781,7 +804,6 @@ li.advantages-item h3 {
     min-width: 12px;
     min-height: 12px;
     display: block;
-    margin-right: 25px;
 }
 
 .breadcrumbs-link-to-mainpage:hover {
@@ -790,7 +812,7 @@ li.advantages-item h3 {
 
 .breadcrumbs-link-to-mainpage:focus-visible {
     opacity: 1;
-    outline: visible;
+    outline: none;
 }
 
 .breadcrumbs-link-to-mainpage:focus {
@@ -832,11 +854,9 @@ fieldset {
 
 .visual-price-range {
     position: relative;
-    height: 4px;
-    background-color: #FFFFFF;
     width: 288px;
-    opacity: 0.3;
-    /* не понимаю, почему это свойство унаследовалось всем остальным элементам */
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .price-range-bar {
@@ -856,6 +876,11 @@ fieldset {
     background-color: transparent;
     appearance: textfield;
     border: none;
+    font-family: inherit;
+}
+
+.price-range-input:focus-visible {
+    outline: none;
 }
 
 .price-range-input::-webkit-outer-spin-button,
@@ -872,61 +897,60 @@ fieldset {
     border-radius: 4px;
     padding-right: 16px;
     width: 145px;
+    position: relative;
 }
 
-.price-range label:nth-last-of-type(2) {
-    border-radius: 4px 0px 0px 4px;
+.price-range label:nth-of-type(1) {
+    border-radius: 4px 0 0 4px;
     border-right: 1px solid #FFFFFF;
 }
 
-.price-range label:nth-last-of-type(1) {
-    border-radius: 0px 4px 4px 0px;
+.price-range label:nth-of-type(2) {
+    border-radius: 0 4px 4px 0;
     border-left: 1px solid #FFFFFF;
 }
 
-.price-range label:nth-last-of-type(2):hover {
+.price-range label:nth-of-type(1):hover {
     border: 2px solid rgba(255, 255, 255, 0.6);
     border-right: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.price-range label:nth-last-of-type(2):focus {
+.price-range label:nth-of-type(1):focus {
     border: 2px solid rgba(255, 255, 255, 1);
     border-right: 1px solid rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 0px 3px #81B3D2;
-    /* не могу разобраться, как сделать еще внутреннюю обводку */
+    box-shadow: 0 0 0 3px #81B3D2, inset 0 0 0 3px #81B3D2;
 }
 
-.price-range label:nth-last-of-type(2):focus-visible {
+.price-range label:nth-of-type(1):focus-visible {
     border: 2px solid rgba(255, 255, 255, 1);
     border-right: 1px solid rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 0px 3px #81B3D2;
+    box-shadow: 0 0 0 3px #81B3D2, inset 0 0 0 3px #81B3D2;
     outline: none;
 }
 
-.price-range label:nth-last-of-type(2):active {
+.price-range label:nth-of-type(1):active {
     background: #756257;
 }
 
-.price-range label:nth-last-of-type(1):hover {
+.price-range label:nth-of-type(2):hover {
     border: 2px solid rgba(255, 255, 255, 0.6);
     border-left: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.price-range label:nth-last-of-type(1):focus {
+.price-range label:nth-of-type(2):focus {
     border: 2px solid rgba(255, 255, 255, 1);
     border-left: 1px solid rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 0px 3px #81B3D2;
-    /* не могу разобраться, как сделать еще внутреннюю обводку */
+    box-shadow: 0 0 0 3px #81B3D2, inset 0 0 0 3px #81B3D2;
 }
 
-.price-range label:nth-last-of-type(1):focus-visible {
+.price-range label:nth-of-type(2):focus-visible {
     border: 2px solid rgba(255, 255, 255, 1);
     border-left: 1px solid rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 0px 3px #81B3D2;
+    box-shadow: 0 0 0 3px #81B3D2, inset 0 0 0 3px #81B3D2;
     outline: none;
 }
 
-.price-range label:nth-last-of-type(1):active {
+.price-range label:nth-of-type(2):active {
     background: #756257;
 }
 
@@ -940,6 +964,9 @@ fieldset {
     line-height: 23px;
     opacity: 0.3;
     border: none;
+    position: absolute;
+    right: 15px;
+    top: 12px;
 }
 
 .hotel-catalog legend.category {
@@ -965,23 +992,23 @@ fieldset {
 }
 
 .range-toggle:hover {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .range-toggle:focus {
     border: 3px solid #83B3D3;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .range-toggle:focus-visible {
     border: 3px solid #83B3D3;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     outline: none;
 }
 
 .range-toggle:active {
     border: 2px solid #83B3D3;
-    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
 .toggle-min {
@@ -1010,6 +1037,7 @@ section.hotel-catalog .livingtype-item-name {
     padding-top: 60px;
     padding-bottom: 71px;
     justify-content: space-between;
+    align-items: center;
 }
 
 .hotel-catalog fieldset:not(.price-filter-fieldset) label:not(:last-of-type) span:last-of-type {
@@ -1069,7 +1097,7 @@ section.hotel-catalog .livingtype-item-name {
     width: 20px;
     height: 20px;
     background: #FFFFFF;
-    border-radius: 10px;
+    border-radius: 50%;
     left: 0;
     top: 0;
 }
@@ -1079,7 +1107,7 @@ section.hotel-catalog .livingtype-item-name {
 }
 
 .livingtype-list-label:focus .control-mark-radio {
-    border: 3px solid #83B3D3;
+    outline: 3px solid #83B3D3;
 }
 
 .livingtype-list-label:active .control-mark-radio {
@@ -1090,7 +1118,7 @@ section.hotel-catalog .livingtype-item-name {
     position: absolute;
     content: "";
     background-color: #3F5E72;
-    border-radius: 10px;
+    border-radius: 50%;
     width: 10px;
     height: 10px;
     top: 5px;
@@ -1117,6 +1145,10 @@ section.hotel-catalog .livingtype-item-name {
     color: #FFFFFF;
     font-family: inherit;
     background-color: transparent;
+    display: block;
+    width: 100px;
+    height: 32px;
+    padding: 4px 15px;
 }
 
 .reset-search:hover {
@@ -1135,7 +1167,6 @@ section.hotel-catalog .livingtype-item-name {
 
 .reset-search:active {
     color: rgba(255, 255, 255, 0.3);
-    ;
 }
 
 .navigation-main-items .navigation-list-item {
@@ -1187,16 +1218,17 @@ section.hotel-catalog .livingtype-item-name {
     background-position: right 20px center;
     background-color: #FFFFFF;
     appearance: none;
-    margin-right: 78px;
-    margin-left: auto;
-    /* не понимаю, как корректно расположить элемент горизонтально на нужно месте */
-}
-
-.select-controls option {
-    font-size: 18px;
     line-height: 21px;
     color: #333333;
+    font-size: 18px;
+    font-family: inherit;
 }
+
+.select-controls-section {
+    margin-right: 22px;
+    margin-left: auto;
+}
+
 
 .select-controls:hover,
 .number-of-hotels-select:hover {
@@ -1219,9 +1251,20 @@ section.hotel-catalog .livingtype-item-name {
     border: 2px solid #3F5E72;
 }
 
+.select-controls:disabled,
+.number-of-hotels-select:disabled {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.select-controls:disabled option,
+.number-of-hotels-select:disabled option {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .vision-per-page {
     display: flex;
-    margin-left: auto;
+    justify-content: flex-end;
+    width: 216px;
 }
 
 .vision-per-page .button-vision {
@@ -1290,8 +1333,6 @@ section.hotel-catalog .livingtype-item-name {
     background-repeat: no-repeat;
     background-position: center;
 }
-
-
 
 
 .product-card-title {
@@ -1511,6 +1552,9 @@ section.hotel-catalog .livingtype-item-name {
     border: 2px solid #E5E5E5;
     border-radius: 4px;
     background-color: #FFFFFF;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 21px;
 }
 
 .select-dates-mainpage {
@@ -1571,13 +1615,10 @@ section.hotel-catalog .livingtype-item-name {
     padding-top: 62px;
     padding-left: 70px;
     padding-bottom: 70px;
+    padding-right: 40px;
     background-color: #FFFFFF;
-    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
-}
-
-.search-for-hotel-modal {
-    width: 715px;
 }
 
 button.modal-close-button {
@@ -1592,31 +1633,27 @@ button.modal-close-button {
     border: none;
 }
 
-.modal-close-button svg.close-button-modal circle {
+.modal-close-button svg circle {
     fill: #F2F2F2;
 }
 
-.modal-close-button svg.close-button-modal path {
+.modal-close-button svg path {
     fill: #000;
 }
 
 
-.modal-close-button:hover svg.close-button-modal circle {
+.modal-close-button:hover svg circle {
     fill: #E6E6E6;
 }
 
 .modal-close-button:focus {
     fill: #E6E6E6;
-    border: 3px solid #83B3D3;
-    /* не понимаю, как применить тут рамку */
+    outline: 3px solid #83B3D3;
 }
 
 .modal-close-button:focus-visible {
     fill: #E6E6E6;
-    border: 3px solid #83B3D3;
-    /* не понимаю, как применить тут рамку */
-    outline: none;
-    /* не работает, кнопка съезжает */
+    outline: 3px solid #83B3D3;
 }
 
 .modal-close-button:active svg.close-button-modal circle {
@@ -1646,15 +1683,96 @@ button.modal-close-button {
     margin: 0;
 }
 
+.adults-children-input-buttons {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 14px;
+}
+
 .adults-and-children {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.modal-amount-guests-button {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.modal-amount-guests-minus {
+    left: 13px;
+    padding-bottom: 11px;
+}
+
+.modal-amount-guests-plus {
+    right: 13px;
+}
+
+.modal-amount-guests-button svg {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.modal-amount-guests-button:hover svg {
+    fill: rgba(0, 0, 0, 1);
+}
+
+
+.modal-amount-guests-button:focus svg {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.modal-amount-guests-button:focus {
+    outline: 3px solid #83B3D3;
+    outline-offset: 3px;
+    border-radius: 1px;
+}
+
+.modal-amount-guests-button:focus-visible svg {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.modal-amount-guests-button:focus-visible {
+    outline: 3px solid #83B3D3;
+    outline-offset: 3px;
+    border-radius: 1px;
+}
+
+.modal-amount-guests-button:active svg {
+    fill: rgba(0, 0, 0, 0.2);
+}
+
+.adults-grid-element {
+    display: grid;
+    grid-template-columns: auto 133px;
     align-items: center;
 }
 
-.adults-and-children label:not(:last-of-type) {
-    margin-right: 56px;
+.children-grid-element {
+    display: grid;
+    grid-template-columns: auto 49px 133px;
+    align-items: center;
 }
 
+.number-of-children {
+    justify-self: end;
+}
+
+.tooltip-button:hover .tooltip-icon circle {
+    fill: #68A2CA;
+}
+
+.tooltip-button:hover+.tooltip-text,
+.tooltip-button:focus+.tooltip-text {
+    display: block;
+}
 
 .modal-form-input {
     background-color: #F2F2F2;
@@ -1669,22 +1787,126 @@ button.modal-close-button {
     font-size: 18px;
     line-height: 21px;
     font-family: "PT Sans", Arial, sans-serif;
+}
 
+.modal-form-input:hover {
+    background: #E6E6E6;
+}
 
+.modal-form-input:focus {
+    box-shadow: 0 0 0 3px #83B3D3;
+    border-radius: 4px;
+    background: #E6E6E6;
+}
+
+.modal-form-input:focus-visible {
+    box-shadow: 0 0 0 3px #83B3D3;
+    border-radius: 4px;
+    background: #E6E6E6;
+    outline: none;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip-button {
+    position: absolute;
+    left: 6px;
+    top: 0;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    margin: auto;
+    padding: 0;
+}
+
+.tooltip-text {
+    background: #333333;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    font-family: inherit;
+    display: block;
+    text-transform: none;
+    position: absolute;
+    bottom: 100%;
+    z-index: 4;
+    width: 256px;
+    padding-top: 15px;
+    padding-right: 18px;
+    padding-left: 22px;
+    padding-bottom: 18px;
+    bottom: -165px;
+    left: -115px;
+    display: none;
+}
+
+.tooltip-text::before {
+    content: url("../images/tooltip-triangle.svg");
+    position: absolute;
+    bottom: 128px;
+    left: 115px;
+}
+
+.input-and-calendar {
+    position: relative;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+.tooltip-icon svg circle {
+    fill: #83B3D3;
+}
+
+.tooltip-icon svg g {
+    fill: #ffffff;
+}
+
+.tooltip-icon svg path {
+    fill: #ffffff;
+}
+*/
+.arrival-dates {
+    display: grid;
+    grid-template-columns: auto 420px;
+    grid-template-rows: 50px min(40px);
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.departure-dates {
+    display: grid;
+    grid-template-columns: auto 420px;
+    grid-template-rows: 50px min(40px);
+    margin-bottom: 11px;
 }
 
 .adults-and-children .modal-form-input {
-    padding-top: 15px;
-    padding-left: 61px;
-    padding-bottom: 14px;
-    padding-right: 62px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 133px;
     color: #000000;
     font-size: 18px;
     line-height: 21px;
     font-family: "PT Sans", Arial, sans-serif;
-    /* не понимаю, почему не отображается число */
+    appearance: none;
 }
+
+.adults-and-children .modal-form-input::-webkit-outer-spin-button,
+.adults-and-children .modal-form-input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
 
 .modal-find-hotel {
     background: #83B3D3;
@@ -1702,67 +1924,67 @@ button.modal-close-button {
     margin: 0;
 }
 
-.fieldset {
-    display: grid;
-    grid-template-columns: 155px 189px 97px 133px;
-    column-gap: 0;
-    grid-template-areas:
-        "arrival arrival-date arrival-date arrival-date"
-        " . alert alert alert"
-        "departure departure-date departure-date departure-date"
-        ". alert-p alert-p alert-p"
-        "adults adults-amount children children-amount";
-    /* не понимаю, почему встает на ряд выше нужного */
-    align-items: center;
-}
-
-.arrival {
-    grid-area: arrival;
-}
-
-.arrival-date {
-    grid-area: arrival-date;
-}
-
-.departure {
-    grid-area: departure;
-}
-
-
-.departure-date {
-    grid-area: departure-date;
-}
-
-.adults-and-children .adults {
-    grid-area: adults;
-}
-
-.adults-and-children .number-of-adults {
-    grid-area: adults-amount;
-    width: 133px;
-}
-
-.adults-and-children .children {
-    grid-area: children;
-}
-
-.adults-and-children .number-of-children {
-    grid-area: children-amount;
-    width: 133px;
-}
-
 .error-alert {
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
     color: #FF5757;
-    grid-area: alert;
+    grid-column: 2/-1;
 }
 
 .hotels-found {
-    grid-area: alert-p;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
     color: #333333;
+    grid-column: 2/-1;
+}
+
+.input-and-calendar .calendar-icon {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.calendar-button {
+    position: absolute;
+    top: 0;
+    right: 19px;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: auto;
+    background-color: transparent;
+}
+
+.calendar-button:hover .calendar-icon {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.calendar-button:focus-visible {
+    outline: none;
+}
+
+.calendar-button:focus-visible .calendar-icon {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.calendar-button:focus-visible {
+    outline: 3px solid #83B3D3;
+    outline-offset: 3px;
+    ;
+}
+
+.calendar-button:focus .calendar-icon {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.calendar-button:focus {
+    outline: 3px solid #83B3D3;
+    outline-offset: 3px;
+    ;
+}
+
+
+.calendar-button:active .calendar-icon {
+    fill: rgba(0, 0, 0, 0.2);
 }
