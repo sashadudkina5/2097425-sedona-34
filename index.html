@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -31,7 +32,6 @@
               </li>
             </ul>
         </ul>
-
 
         <ul class="navigation-list navigation-user">
           <li class="navigation-list-item">
@@ -76,7 +76,7 @@
         <ul class="advantages-list">
           <li class="advantages-item advantage-1">
             <div class="column-direction real-city">
-              <h3 class="main-advantage">Настоящий городок</h3>
+              <h3 class="main-advantage">Настоящий<br> городок</h3>
               <p class="advantages-description-main">— №1 —</p>
               <p class="advantages-description-main">Седона — не аттракцион для<br> туристов, там течёт своя<br> жизнь
               </p>
@@ -91,7 +91,8 @@
               </li>
               <li class="advantages-item advantage-3 column-direction">
                 <h3>Еда</h3>
-                <p class="advantages-description">Всегда заказывайте<br> топовый фирменный бургер, вы не разочаруетесь!
+                <p class="advantages-description">Всегда заказывайте<br> топовый фирменный бургер,<br> вы не
+                  разочаруетесь!
                 </p>
               </li>
               <li class="advantages-item advantage-4 column-direction">
@@ -155,7 +156,6 @@
         </form>
       </section>
 
-
       <div class="footer-bottom">
         <section class="social-media-list">
 
@@ -194,7 +194,6 @@
           </ul>
         </section>
 
-
         <address class="contacts">
           <p class="visually-hidden">Контактный номер телефона</p>
           <a class="contact-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
@@ -217,7 +216,7 @@
 
   <div class="modal-window-container">
     <div class="modal search-for-hotel-modal">
-      <button class="modal-close-button button">
+      <button class="modal-close-button button hide" type="button">
         <svg class="close-button-icon" aria-hidden="true" focusable="false" width="53" height="53" viewBox="0 0 53 53"
           fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="26.5" cy="26.5" r="26.5" />
@@ -234,9 +233,9 @@
 
             <label class="modal-form-category" for="arrival-date">Дата заезда:</label>
             <span class="input-and-calendar">
-              <input class="modal-form-input" type="text" placeholder="Укажите дату" value="27 апреля 2020"
-                name="arrival-date" id="arrival-date">
-              <button class="calendar-button button">
+              <input class="modal-form-input" type="text" placeholder="27 апреля 2020" value="" name="arrival-date"
+                id="arrival-date">
+              <button class="calendar-button button" type="button">
                 <span class="visually-hidden">Выбрать дату</span>
                 <svg class="calendar-icon" aria-hidden="true" focusable="false" width="15" height="15"
                   viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -254,9 +253,9 @@
           <div class="departure-dates">
             <label class="modal-form-category" for="departure-date">Дата выезда:</label>
             <span class="input-and-calendar">
-              <input class="modal-form-input" type="text" placeholder="Укажите дату" value="1 сентября 2021"
-                name="departure-date" id="departure-date">
-              <button class="calendar-button button">
+              <input class="modal-form-input" type="text" placeholder="1 сентября 2021" value="" name="departure-date"
+                id="departure-date">
+              <button class="calendar-button button" type="button">
                 <span class="visually-hidden">Выбрать дату</span>
                 <svg class="calendar-icon" aria-hidden="true" focusable="false" width="15" height="15"
                   viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -271,13 +270,12 @@
             <p class="hotels-found">На эти даты есть свободные номера. Пока есть.</p>
           </div>
 
-
           <div class="adults-and-children">
 
             <span class="adults-grid-element">
               <label class="modal-form-category number-of-adults" for="adults">Взрослые:</label>
               <span class="adults-children-input-buttons">
-                <button class="modal-amount-guests-button modal-amount-guests-minus button">
+                <button class="modal-amount-guests-button modal-amount-guests-minus button" type="button">
                   <svg class="amount-button-svg" aria-hidden="true" focusable="false" width="13" height="1"
                     viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0v1h13V0H0Z" />
@@ -285,7 +283,7 @@
                   <span class="visually-hidden">Убавить</span>
                 </button>
                 <input class="modal-form-input" type="number" value="2" name="number-of-adults" id="adults">
-                <button class="modal-amount-guests-button modal-amount-guests-plus button">
+                <button class="modal-amount-guests-button modal-amount-guests-plus button" type="button">
                   <svg class="amount-button-svg" aria-hidden="true" focusable="false" width="13" height="13"
                     viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" />
@@ -311,13 +309,14 @@
                       </clipPath>
                     </defs>
                   </svg>
+                  <span class="visually-hidden">Уточняющая информация</span>
                 </button>
                 <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей,<br> которые будут
                   с вами, возраст<br> которых от 6
                   до 18 лет. Дети<br> до 6 лет размещаются<br> бесплатно.</span>
               </span>
               <span class="adults-children-input-buttons">
-                <button class="modal-amount-guests-button modal-amount-guests-minus button">
+                <button class="modal-amount-guests-button modal-amount-guests-minus button" type="button">
                   <svg class="amount-button-svg" aria-hidden="true" focusable="false" width="13" height="1"
                     viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0v1h13V0H0Z" />
@@ -325,7 +324,7 @@
                   <span class="visually-hidden">Убавить</span>
                 </button>
                 <input class="modal-form-input" type="number" value="1" name="number-of-children" id="children">
-                <button class="modal-amount-guests-button modal-amount-guests-plus button">
+                <button class="modal-amount-guests-button modal-amount-guests-plus button" type="button">
                   <svg class="amount-button-svg" aria-hidden="true" focusable="false" width="13" height="13"
                     viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" />
@@ -338,12 +337,9 @@
           </div>
           <button class="modal-find-hotel button" type="submit">Найти</button>
 
-
         </form>
       </section>
-
     </div>
-
   </div>
 </body>
 
