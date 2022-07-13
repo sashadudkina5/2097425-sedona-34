@@ -848,7 +848,7 @@ li.advantages-item h3 {
   opacity: 0.3;
 }
 
-fieldset {
+.hotel-catalog fieldset {
   color: #ffffff;
 }
 
@@ -1072,7 +1072,7 @@ section.hotel-catalog .livingtype-item-name {
   align-items: center;
 }
 
-fieldset:not(.price-filter-fieldset) label:not(:last-of-type) span:last-of-type {
+fieldset:not(.price-filter-fieldset) span:last-of-type {
   margin-bottom: 15px;
 }
 
@@ -1662,15 +1662,15 @@ button.modal-close-button {
   border: none;
 }
 
-.modal-close-button svg circle {
+.modal-close-button circle {
   fill: #f2f2f2;
 }
 
-.modal-close-button svg path {
+.modal-close-button path {
   fill: #000000;
 }
 
-.modal-close-button:hover svg circle {
+.modal-close-button:hover circle {
   fill: #e6e6e6;
 }
 
@@ -1678,7 +1678,7 @@ button.modal-close-button {
   outline: 3px solid #83b3d3;
 }
 
-.modal-close-button:focus svg circle {
+.modal-close-button:focus circle {
   fill: #e6e6e6;
 }
 
@@ -1686,7 +1686,7 @@ button.modal-close-button {
   outline: 3px solid #83b3d3;
 }
 
-.modal-close-button:focus-visible svg circle {
+.modal-close-button:focus-visible circle {
   fill: #e6e6e6;
 }
 
@@ -1798,7 +1798,7 @@ button.modal-close-button {
   justify-self: end;
 }
 
-.tooltip-button:hover .tooltip-icon circle {
+.tooltip-button:hover circle {
   fill: #68a2ca;
 }
 
