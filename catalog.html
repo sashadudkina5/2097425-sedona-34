@@ -134,12 +134,12 @@
             <fieldset class="price-filter-fieldset">
               <legend class="price-filter-title">Стоимость, ₽:</legend>
               <div class="price-range">
-                <label class="price-range-label">
-                  <input class="price-range-input" type="number" value="0" name="min-price"><span
+                <label class="price-range-label min-price-label">
+                  <input class="price-range-input min-price-input" type="number" value="0" name="min-price"><span
                     class="input-price-from-to">от</span>
                 </label>
-                <label class="price-range-label">
-                  <input class="price-range-input" value="9000" name="max-price"><span
+                <label class="price-range-label max-price-label">
+                  <input class="price-range-input max-price-input" value="9000" name="max-price"><span
                     class="input-price-from-to">до</span>
                 </label>
               </div>
@@ -262,7 +262,7 @@
       <div class="filters-bottom-container">
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-current">1</a>
+            <a class="pagination-link pagination-current" href="#">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -298,7 +298,7 @@
         <p class="only-useful-info">Только полезная информация и никакого спама,<br>
           честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="input-email-subscribe" type="email" placeholder="Ваш e-mail" id="subscribe">
+          <input class="input-email-subscribe" type="email" placeholder="Ваш e-mail" id="subscribe" required>
           <label for="subscribe" class="visually-hidden">Ваш e-mail.</label>
           <button class="newsletter-button button" type="submit">Подписаться</button>
         </form>

@@ -211,20 +211,20 @@ body {
   fill: #000000;
 }
 
-.navigation-link svg:hover {
+.navigation-link:hover svg{
   fill: #756157;
 }
 
-.navigation-link svg:focus-visible {
+.navigation-link:focus-visible svg {
   fill: #756157;
   outline: none;
 }
 
-.navigation-link svg:focus {
+.navigation-link:focus svg {
   fill: #756157;
 }
 
-.navigation-link svg:active {
+.navigation-link:active svg {
   fill: rgba(117, 97, 87, 0.3);
 }
 
@@ -238,6 +238,7 @@ body {
   padding-bottom: 82px;
   margin-bottom: 0;
   position: relative;
+  max-height: 483px;
 }
 
 .welcome-text::after {
@@ -249,7 +250,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  bottom: -435px;
+  bottom: -428px;
 }
 
 .advantages {
@@ -257,7 +258,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  padding-top: 59px;
+  padding-top: 65px;
   margin-bottom: 90px;
 }
 
@@ -570,7 +571,8 @@ li.advantages-item h3 {
 .newsletter-button:focus-visible,
 .modal-find-hotel:focus-visible {
   background: #68a2ca;
-  outline: none;
+  outline: 3px solid #756257;
+  border-radius: 10px;
 }
 
 .button-add-to-favorites:focus,
@@ -578,6 +580,8 @@ li.advantages-item h3 {
 .newsletter-button:focus,
 .modal-find-hotel:focus {
   background: #68a2ca;
+  outline: 3px solid #756257;
+  border-radius: 10px;
 }
 
 .button-add-to-favorites:active,
@@ -586,12 +590,6 @@ li.advantages-item h3 {
 .modal-find-hotel:active {
   background: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
-}
-
-.modal-find-hotel:focus,
-.modal-find-hotel:focus-visible {
-  outline: 3px solid #756257;
-  border-radius: 10px;
 }
 
 .footer-background-main-page {
@@ -627,7 +625,7 @@ li.advantages-item h3 {
 }
 
 .only-useful-info {
-  margin-bottom: 44px;
+  margin-bottom: 45px;
   margin-top: 0;
 }
 
@@ -653,11 +651,13 @@ li.advantages-item h3 {
 
 .input-email-subscribe:focus {
   background: #e6e6e6;
-  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+  border-radius: 10px 0 0 10px;
 }
 
 .input-email-subscribe:focus-visible {
-  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+  border-radius: 10px 0 0 10px;
   background: #e6e6e6;
 }
 
@@ -724,7 +724,7 @@ li.advantages-item h3 {
   width: 47px;
   height: 40px;
   text-align: center;
-  padding-top: 8px;
+  padding-top: 5px;
   cursor: pointer;
   border: none;
   display: inline-block;
@@ -738,20 +738,23 @@ li.advantages-item h3 {
   fill: #83b3d3;
 }
 
-.social-media-link svg:hover {
+.social-media-link:hover svg {
   fill: #68a2ca;
 }
 
-.social-media-link svg:focus-visible {
-  fill: #68a2ca;
-  outline: none;
-}
-
-.social-media-link svg:focus {
+.social-media-link:focus svg {
   fill: #68a2ca;
 }
 
-.social-media-link svg:active {
+.social-media-link:focus-visible svg {
+    fill: #68a2ca;
+}
+
+.social-media-link:focus-visible {
+    outline: none;
+}
+
+.social-media-link:active svg {
   fill: rgba(104, 162, 202, 0.3);
 }
 
@@ -804,7 +807,7 @@ li.advantages-item h3 {
 }
 
 .breadcrumbs-item-hotels:focus {
-  color: #ffffff;
+  color: inherit;
 }
 
 .breadcrumbs-item-hotels:active {
@@ -836,20 +839,11 @@ li.advantages-item h3 {
 }
 
 .breadcrumbs-link-to-mainpage:focus-visible {
-  opacity: 1;
   outline: none;
-}
-
-.breadcrumbs-link-to-mainpage:focus {
-  opacity: 1;
 }
 
 .breadcrumbs-link-to-mainpage:active {
   opacity: 0.3;
-}
-
-.hotel-catalog fieldset {
-  color: #ffffff;
 }
 
 .filters-catalog-form {
@@ -897,13 +891,15 @@ li.advantages-item h3 {
   padding-left: 16px;
   padding-top: 12px;
   padding-bottom: 10px;
+  width: 145px;
   font-size: 18px;
   line-height: 21px;
   color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
   background-color: transparent;
   -webkit-appearance: textfield;
   appearance: textfield;
-  border: none;
   font-family: inherit;
 }
 
@@ -922,64 +918,62 @@ li.advantages-item h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #ffffff;
-  border-radius: 4px;
   padding-right: 16px;
   width: 145px;
   position: relative;
 }
 
-.price-range label:nth-of-type(1) {
-  border-radius: 4px 0 0 4px;
-  border-right: 1px solid #ffffff;
+.min-price-input {
+    border-radius: 4px 0 0 4px;
+    border-right: 1px solid #ffffff;
 }
 
-.price-range label:nth-of-type(2) {
-  border-radius: 0 4px 4px 0;
-  border-left: 1px solid #ffffff;
+.max-price-input {
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #ffffff;
 }
-
-.price-range label:nth-of-type(1):hover {
+  
+.min-price-input:hover {
   border: 2px solid rgba(255, 255, 255, 0.6);
   border-right: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.price-range label:nth-of-type(1):focus {
+.min-price-input:focus {
   border: 2px solid rgba(255, 255, 255, 1);
   border-right: 1px solid rgba(255, 255, 255, 1);
   box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
 }
 
-.price-range label:nth-of-type(1):focus-visible {
+.min-price-input:focus-visible {
   border: 2px solid rgba(255, 255, 255, 1);
   border-right: 1px solid rgba(255, 255, 255, 1);
   box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
   outline: none;
 }
 
-.price-range label:nth-of-type(1):active {
+.min-price-input:active {
   background: #756257;
 }
 
-.price-range label:nth-of-type(2):hover {
+.max-price-input:hover {
   border: 2px solid rgba(255, 255, 255, 0.6);
   border-left: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.price-range label:nth-of-type(2):focus {
+.max-price-input:focus {
   border: 2px solid rgba(255, 255, 255, 1);
   border-left: 1px solid rgba(255, 255, 255, 1);
   box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
 }
 
-.price-range label:nth-of-type(2):focus-visible {
+.max-price-input:focus-visible {
   border: 2px solid rgba(255, 255, 255, 1);
   border-left: 1px solid rgba(255, 255, 255, 1);
   box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
   outline: none;
 }
 
-.price-range label:nth-of-type(2):active {
+.max-price-input:active {
   background: #756257;
 }
 
@@ -1006,8 +1000,9 @@ li.advantages-item h3 {
 
 .hotel-catalog fieldset {
   border: none;
-  margin-bottom: 70px;
+  margin-bottom: 55px;
   padding: 0;
+  color: #ffffff;
 }
 
 .range-toggle {
@@ -1067,7 +1062,7 @@ section.hotel-catalog .livingtype-item-name {
   display: flex;
   flex-direction: column;
   padding-top: 60px;
-  padding-bottom: 71px;
+  padding-bottom: 65px;
   justify-content: space-between;
   align-items: center;
 }
@@ -1137,7 +1132,7 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
   background: #ffffff;
 }
 
-.livingtype-list-label:focus .control-mark-radio {
+.livingtype-item-input:focus .control-mark-radio {
   outline: 3px solid #83b3d3;
 }
 
@@ -1165,10 +1160,7 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
   background-color: transparent;
   display: block;
   width: 100px;
-  padding-top: 15px;
-  padding-bottom: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 5px 15px;
 }
 
 .reset-search:hover {
@@ -1221,6 +1213,8 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
   font-weight: 700;
   margin: 0;
   margin-right: auto;
+  display: block;
+  max-width: 700px;
 }
 
 .select-controls {
@@ -1614,15 +1608,15 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
   fill: #000000;
 }
 
-.website-developer-link svg:hover {
+.website-developer-link:hover svg {
   fill: #756157;
 }
 
-.website-developer-link svg:focus {
+.website-developer-link:focus svg {
   fill: #756157;
 }
 
-.website-developer-link svg:active {
+.website-developer-link:active svg {
   fill: rgba(117, 97, 87, 0.3);
 }
 

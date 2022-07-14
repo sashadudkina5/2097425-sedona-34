@@ -31,6 +31,7 @@
                 <a class="navigation-link" href="catalog.html">Гостиницы</a>
               </li>
             </ul>
+          </li>
         </ul>
 
         <ul class="navigation-list navigation-user">
@@ -150,7 +151,7 @@
         <p class="only-useful-info">Только полезная информация и никакого спама,<br>
           честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="input-email-subscribe" type="email" placeholder="Ваш e-mail" id="subscribe">
+          <input class="input-email-subscribe" type="email" placeholder="Ваш e-mail" id="subscribe" required>
           <label class="visually-hidden" for="subscribe">Ваш e-mail.</label>
           <button class="newsletter-button button" type="submit">Подписаться</button>
         </form>
@@ -232,7 +233,7 @@
             <label class="modal-form-category" for="arrival-date">Дата заезда:</label>
             <span class="input-and-calendar">
               <input class="modal-form-input" type="text" placeholder="27 апреля 2020" value="" name="arrival-date"
-                id="arrival-date">
+                id="arrival-date" required>
               <button class="calendar-button button" type="button">
                 <span class="visually-hidden">Выбрать дату.</span>
                 <svg class="calendar-icon" aria-hidden="true" focusable="false" width="15" height="15"
@@ -252,7 +253,7 @@
             <label class="modal-form-category" for="departure-date">Дата выезда:</label>
             <span class="input-and-calendar">
               <input class="modal-form-input" type="text" placeholder="1 сентября 2021" value="" name="departure-date"
-                id="departure-date">
+                id="departure-date" required>
               <button class="calendar-button button" type="button">
                 <span class="visually-hidden">Выбрать дату.</span>
                 <svg class="calendar-icon" aria-hidden="true" focusable="false" width="15" height="15"
@@ -279,7 +280,7 @@
                   </svg>
                   <span class="visually-hidden">Убавить.</span>
                 </button>
-                <input class="modal-form-input" type="number" value="2" name="number-of-adults" id="adults">
+                <input class="modal-form-input" type="number" value="2" name="number-of-adults" id="adults" required>
                 <button class="modal-amount-guests-button modal-amount-guests-plus button" type="button">
                   <svg class="amount-button-svg" aria-hidden="true" focusable="false" width="13" height="13"
                     viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -320,7 +321,7 @@
                   </svg>
                   <span class="visually-hidden">Убавить.</span>
                 </button>
-                <input class="modal-form-input" type="number" value="1" name="number-of-children" id="children">
+                <input class="modal-form-input" type="number" value="1" name="number-of-children" id="children" required>
                 <button class="modal-amount-guests-button modal-amount-guests-plus button" type="button">
                   <svg class="amount-button-svg" aria-hidden="true" focusable="false" width="13" height="13"
                     viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
