@@ -14,7 +14,9 @@
   font-display: swap;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -377,7 +379,7 @@ li.advantages-item h3 {
 }
 
 .advantage-4 {
-  background-image: url("../images/advantages/souvenir.svg");
+  background-image: url("../images/advantages/souvenirs.svg");
   background-repeat: no-repeat;
   background-position: 50% 80px;
 }
@@ -459,7 +461,6 @@ li.advantages-item h3 {
 .added-to-favorites {
   -ms-grid-row: 7;
   -ms-grid-column: 3;
-  grid-area: favorites;
 }
 
 .link-to-catalog:hover,
@@ -676,6 +677,7 @@ li.advantages-item h3 {
 .footer-bottom {
   background-color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
   color: #000000;
   justify-content: space-between;
   margin: 0;
@@ -848,6 +850,7 @@ li.advantages-item h3 {
 
 .filters-catalog-form {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .catalog-filters {
@@ -1099,18 +1102,22 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
   top: 0;
 }
 
-.infrustructure-list-label:hover .control-mark-checkbox {
+.infrustructure-item-input:hover + .control-mark-checkbox {
   background: rgba(255, 255, 255, 0.6);
 }
 
-.infrustructure-list-label:focus .control-mark-checkbox {
+.infrustructure-item-input:focus + .control-mark-checkbox {
   background: rgba(255, 255, 255, 0.6);
   border: 3px solid #83b3d3;
 }
 
-.infrustructure-list-label:active .control-mark-checkbox {
+.infrustructure-item-input:active + .control-mark-checkbox {
   background: rgba(255, 255, 255, 0.3);
 }
+
+.infrustructure-item-input:disabled + .control-mark-checkbox {
+    background: rgba(255, 255, 255, 0.3);
+  }
 
 .infrustructure-list {
   display: block;
@@ -1128,16 +1135,20 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
   top: 0;
 }
 
-.livingtype-list-label:hover .control-mark-radio {
+.livingtype-item-input:hover + .control-mark-radio {
   background: #ffffff;
 }
 
-.livingtype-item-input:focus .control-mark-radio {
+.livingtype-item-input:focus + .control-mark-radio {
   outline: 3px solid #83b3d3;
 }
 
-.livingtype-list-label:active .control-mark-radio {
+.livingtype-item-input:active + .control-mark-radio {
   background: #ffffff;
+}
+
+.livingtype-item-input:disabled + .control-mark-radio {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .livingtype-item-input[type="radio"]:checked + .control-mark-radio::before {
@@ -1199,6 +1210,7 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
 
 .result-of-search-container {
   display: flex;
+  flex-wrap: wrap;
   padding-left: 72px;
   padding-right: 71px;
   padding-top: 53px;
@@ -1361,7 +1373,7 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  grid-area: h3;
+  grid-column: 1/-1;
 }
 
 .product-list {
@@ -1392,12 +1404,6 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
   padding: 20px;
   display: grid;
   grid-template-columns: 140px 140px;
-  grid-template-areas:
-    "img img"
-    "h3 h3"
-    "p-hotel p-price"
-    "button-details favorites"
-    "stars rate";
   row-gap: 16px;
   column-gap: 20px;
 }
@@ -1405,7 +1411,6 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
 .stars {
   -ms-grid-row: 9;
   -ms-grid-column: 1;
-  grid-area: stars;
   padding-top: 4px;
 }
 
@@ -1413,10 +1418,10 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
-  grid-area: img;
   object-fit: contain;
   width: 300px;
   height: 211px;
+  grid-column: 1/-1;
 }
 
 .product-card p,
@@ -1427,13 +1432,11 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
 .product-card p:nth-of-type(1) {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
-  grid-area: p-hotel;
 }
 
 .product-card p:nth-of-type(2) {
   -ms-grid-row: 5;
   -ms-grid-column: 3;
-  grid-area: p-price;
 }
 
 .product-list p {
@@ -1454,7 +1457,6 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
   padding: 8px 22px 8px 23px;
   display: block;
   width: 140px;
-  grid-area: rate;
 }
 
 .product-card-button {
@@ -1473,7 +1475,6 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
   -ms-grid-column: 1;
   background-color: #756157;
   text-decoration: none;
-  grid-area: button-details;
 }
 
 .filters-bottom-container {
