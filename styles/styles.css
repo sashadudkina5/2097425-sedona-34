@@ -935,7 +935,7 @@ li.advantages-item h3 {
     border-radius: 0 4px 4px 0;
     border-left: 1px solid #ffffff;
 }
-  
+
 .min-price-input:hover {
   border: 2px solid rgba(255, 255, 255, 0.6);
   border-right: 1px solid rgba(255, 255, 255, 0.6);
@@ -1116,8 +1116,8 @@ fieldset:not(.price-filter-fieldset) span:last-of-type {
 }
 
 .infrustructure-item-input:disabled + .control-mark-checkbox {
-    background: rgba(255, 255, 255, 0.3);
-  }
+  background: rgba(255, 255, 255, 0.3);
+}
 
 .infrustructure-list {
   display: block;
