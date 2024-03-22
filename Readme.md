@@ -8,4 +8,4 @@ The project utilizes HTML and CSS. Key areas of focus during the study process i
 
 ## Project Website
 
-To view the Sedona website, visit the following link: [Sedona Website](https://sashadudkina5.github.io/2097425-sedona-34/)
+To view the Sedona website, visit the following link: [Sedona Website](https://sashadudkina5.github.io/TourGuide_Website_SedonaCity/)
